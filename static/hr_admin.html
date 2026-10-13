@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaceTrack Pro — HR Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080c12;--bg2:#0c1119;--panel:#10161f;--panel2:#141c27;--border:#1b2535;--accent:#00d4ff;--green:#10b981;--yellow:#f59e0b;--red:#ef4444;--purple:#8b5cf6;--text:#dde6f0;--text2:#8899aa;--text3:#3a5068}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:grid;grid-template-columns:210px 1fr;grid-template-rows:54px 1fr}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.016) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.016) 1px,transparent 1px);background-size:42px 42px;pointer-events:none;z-index:0}
+.topbar{grid-column:1/-1;background:rgba(8,12,18,.98);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 22px;gap:14px;z-index:10;position:relative}
+.tb-brand{font-size:15px;font-weight:800}
+.tb-brand em{font-style:normal;color:var(--accent)}
+.tb-sep{width:1px;height:22px;background:var(--border)}
+.tb-page{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:2px;text-transform:uppercase}
+.tb-right{margin-left:auto;display:flex;align-items:center;gap:11px}
+.pp{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.28);color:var(--yellow);font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 11px;border-radius:20px;cursor:pointer}
+.back-a{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 13px;border-radius:6px;text-decoration:none;transition:all .2s}
+.back-a:hover{background:rgba(0,212,255,.14)}
+.sidebar{background:var(--bg2);border-right:1px solid var(--border);padding:16px 0;z-index:5;position:relative}
+.ns{padding:0 10px;margin-bottom:18px}
+.ns-lbl{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;padding:0 8px;margin-bottom:7px}
+.ni{display:flex;align-items:center;gap:9px;padding:8px 12px;border-radius:7px;cursor:pointer;font-size:13px;color:var(--text2);transition:all .18s;margin-bottom:1px}
+.ni:hover{background:rgba(255,255,255,.035);color:var(--text)}
+.ni.active{background:rgba(0,212,255,.07);color:var(--accent);font-weight:600}
+.ni-badge{margin-left:auto;background:rgba(245,158,11,.18);color:var(--yellow);font-family:'JetBrains Mono',monospace;font-size:10px;padding:1px 7px;border-radius:10px}
+.content{padding:20px;overflow-y:auto;z-index:1;position:relative}
+.page{display:none}.page.active{display:block}
+.pg-title{font-size:21px;font-weight:800;letter-spacing:-.4px;margin-bottom:3px}
+.pg-sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:13px;padding:20px;margin-bottom:16px}
+.card-title{font-size:13px;font-weight:700;margin-bottom:13px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.form-full{grid-column:1/-1}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
+.fi,.fs,.fta{background:var(--panel2);border:1px solid var(--border);border-radius:7px;padding:8px 10px;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12px;outline:none;transition:border-color .18s}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,212,255,.07)}
+.fs option{background:var(--panel2)}
+.fta{resize:vertical;min-height:72px}
+.btn{padding:8px 16px;border-radius:7px;font-family:'JetBrains Mono',monospace;font-size:12px;cursor:pointer;border:none;transition:all .18s}
+.btn-p{background:var(--accent);color:#000}.btn-p:hover{background:#00bfe8}
+.btn-s{background:var(--green);color:#000}.btn-s:hover{background:#0da070}
+.btn-d{background:var(--red);color:#fff}.btn-d:hover{background:#dc2626}
+.btn-y{background:var(--yellow);color:#000}.btn-y:hover{background:#d97706}
+.btn-g{background:transparent;border:1px solid var(--border);color:var(--text2)}.btn-g:hover{border-color:var(--text3);color:var(--text)}
+.btn-sm{padding:4px 10px;font-size:10px}
+.dtbl{width:100%;border-collapse:collapse;font-size:12px}
+.dtbl th{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+.dtbl td{padding:10px;border-bottom:1px solid rgba(27,37,53,.5);color:var(--text2);vertical-align:middle}
+.dtbl tr:hover td{background:rgba(255,255,255,.012)}
+.dtbl tr:last-child td{border-bottom:none}
+.tn{color:var(--text);font-weight:700;font-size:13px}.tid{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:10px}.tm{font-family:'JetBrains Mono',monospace;font-size:11px}
+.chip{display:inline-block;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;white-space:nowrap}
+.cp{background:rgba(16,185,129,.14);color:var(--green)}.ca{background:rgba(239,68,68,.14);color:var(--red)}.cy{background:rgba(245,158,11,.14);color:var(--yellow)}.ch{background:rgba(139,92,246,.14);color:var(--purple)}.cc{background:rgba(0,212,255,.1);color:var(--accent)}
+.toast-box{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:6px;z-index:9999}
+.toast{background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:10px 14px;font-size:13px;min-width:250px;display:flex;align-items:center;gap:8px;animation:tin .28s ease;box-shadow:0 8px 28px rgba(0,0,0,.4)}
+.tg{border-left:3px solid var(--green)}.te{border-left:3px solid var(--red)}.tw{border-left:3px solid var(--yellow)}
+@keyframes tin{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="tb-brand">Face<em>Track</em> Pro</div>
+  <div class="tb-sep"></div>
+  <div class="tb-page">HR Admin Panel</div>
+  <div class="tb-right">
+    <div class="pp" onclick="showPage('pending')" id="pp">⏳ 0 Pending</div>
+    <a href="/" class="back-a">← Live Dashboard</a>
+  </div>
+</div>
+
+<div class="sidebar">
+  <div class="ns">
+    <div class="ns-lbl">Attendance</div>
+    <div class="ni active" onclick="showPage('override')" id="ni-override">✏️ Manual Override</div>
+    <div class="ni" onclick="showPage('audit')" id="ni-audit">📋 Audit Trail</div>
+  </div>
+  <div class="ns">
+    <div class="ns-lbl">Leave</div>
+    <div class="ni" onclick="showPage('leave')" id="ni-leave">📝 Apply Leave</div>
+    <div class="ni" onclick="showPage('pending')" id="ni-pending">⏳ Pending <span class="ni-badge" id="nb">0</span></div>
+    <div class="ni" onclick="showPage('balances')" id="ni-balances">📊 Balances</div>
+  </div>
+  <div class="ns">
+    <div class="ns-lbl">On-Duty</div>
+    <div class="ni" onclick="showPage('od')" id="ni-od">🚗 Apply OD</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- Manual Override -->
+  <div class="page active" id="page-override">
+    <div class="pg-title">Manual Attendance Override</div>
+    <div class="pg-sub">Correct any attendance record. Every change is permanently logged in the audit trail.</div>
+    <div class="card">
+      <div class="card-title"><span>✏️ Override Entry</span></div>
+      <div class="form-grid">
+        <div class="fg"><label class="fl">Employee ID *</label><input class="fi" id="ov-id" placeholder="FAC001"></div>
+        <div class="fg"><label class="fl">Date *</label><input class="fi" type="date" id="ov-date"></div>
+        <div class="fg"><label class="fl">New Status *</label>
+          <select class="fs" id="ov-status">
+            <optgroup label="Attendance">
+              <option value="PRESENT">✅ Present</option>
+              <option value="FULL_DAY">✅ Full Day</option>
+              <option value="ABSENT">❌ Absent</option>
+              <option value="PERMISSION">⏱ Permission</option>
+              <option value="HALF_DAY">🕛 Half Day</option>
+            </optgroup>
+            <optgroup label="Leave">
+              <option value="LEAVE_CL">📋 Casual Leave</option>
+              <option value="LEAVE_ML">🏥 Medical Leave</option>
+              <option value="LEAVE_EL">🌴 Earned Leave</option>
+              <option value="LEAVE_COMP">🔄 Comp Off</option>
+              <option value="LEAVE_LOP">💸 Loss of Pay</option>
+            </optgroup>
+            <optgroup label="On-Duty">
+              <option value="OD_FULL">🚗 OD Full Day</option>
+              <option value="OD_AM">🚗 OD Morning</option>
+              <option value="OD_PM">🚗 OD Afternoon</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="fg"><label class="fl">Overridden By</label><input class="fi" id="ov-by" value="admin"></div>
+        <div class="fg"><label class="fl">Arrival (optional)</label><input class="fi" type="time" id="ov-first"></div>
+        <div class="fg"><label class="fl">Departure (optional)</label><input class="fi" type="time" id="ov-last"></div>
+        <div class="fg form-full"><label class="fl">Reason * (mandatory)</label><textarea class="fta" id="ov-reason" placeholder="Required: reason for this override..."></textarea></div>
+      </div>
+      <div style="margin-top:13px;display:flex;gap:8px">
+        <button class="btn btn-y" onclick="submitOverride()">Apply Override</button>
+        <button class="btn btn-g" onclick="['ov-id','ov-reason','ov-first','ov-last'].forEach(i=>document.getElementById(i).value='')">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audit Trail -->
+  <div class="page" id="page-audit">
+    <div class="pg-title">Audit Trail</div>
+    <div class="pg-sub">Complete immutable log of every HR attendance change.</div>
+    <div class="card">
+      <div class="card-title"><span>📋 Override History</span><button class="btn btn-g btn-sm" onclick="loadAudit()">↻ Refresh</button></div>
+      <table class="dtbl">
+        <thead><tr><th>Date</th><th>Employee</th><th>From</th><th>To</th><th>Reason</th><th>By</th><th>At</th></tr></thead>
+        <tbody id="audit-body"><tr><td colspan="7" style="text-align:center;color:var(--text3);padding:16px">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Apply Leave -->
+  <div class="page" id="page-leave">
+    <div class="pg-title">Apply Leave</div>
+    <div class="pg-sub">Submit a leave application. Balance is verified before saving.</div>
+    <div class="card">
+      <div class="card-title">📝 Leave Application</div>
+      <div class="form-grid">
+        <div class="fg"><label class="fl">Employee ID *</label><input class="fi" id="lv-id" placeholder="FAC001"></div>
+        <div class="fg"><label class="fl">Leave Type *</label>
+          <select class="fs" id="lv-type">
+            <option value="CL">Casual Leave (CL)</option>
+            <option value="ML">Medical Leave (ML)</option>
+            <option value="EL">Earned Leave (EL)</option>
+            <option value="COMP">Compensatory Off</option>
+            <option value="MAT">Maternity Leave</option>
+            <option value="PAT">Paternity Leave</option>
+            <option value="LOP">Loss of Pay (LOP)</option>
+            <option value="SL">Special Leave</option>
+          </select>
+        </div>
+        <div class="fg"><label class="fl">From Date *</label><input class="fi" type="date" id="lv-from"></div>
+        <div class="fg"><label class="fl">To Date *</label><input class="fi" type="date" id="lv-to"></div>
+        <div class="fg"><label class="fl">Number of Days *</label><input class="fi" type="number" id="lv-days" min="0.5" step="0.5" placeholder="1 or 0.5"></div>
+        <div class="fg"><label class="fl">Document Reference</label><input class="fi" id="lv-doc" placeholder="Medical cert no. / ref"></div>
+        <div class="fg form-full"><label class="fl">Reason</label><textarea class="fta" id="lv-reason" placeholder="Reason for leave..."></textarea></div>
+      </div>
+      <div style="margin-top:13px;display:flex;gap:8px">
+        <button class="btn btn-p" onclick="submitLeave()">Submit Application</button>
+        <button class="btn btn-g" onclick="['lv-id','lv-from','lv-to','lv-days','lv-doc','lv-reason'].forEach(i=>document.getElementById(i).value='')">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pending -->
+  <div class="page" id="page-pending">
+    <div class="pg-title">Pending Approvals</div>
+    <div class="pg-sub">Leave and OD applications awaiting HR action.</div>
+    <div class="card">
+      <div class="card-title"><span>Leave Applications</span><button class="btn btn-g btn-sm" onclick="loadPending()">↻ Refresh</button></div>
+      <table class="dtbl">
+        <thead><tr><th>#</th><th>Employee</th><th>Type</th><th>From</th><th>To</th><th>Days</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody id="lv-body"><tr><td colspan="8" style="text-align:center;color:var(--text3);padding:16px">Loading...</td></tr></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">On-Duty Applications</div>
+      <table class="dtbl">
+        <thead><tr><th>#</th><th>Employee</th><th>Date</th><th>Purpose</th><th>Session</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody id="od-body"><tr><td colspan="7" style="text-align:center;color:var(--text3);padding:16px">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Leave Balances -->
+  <div class="page" id="page-balances">
+    <div class="pg-title">Leave Balances</div>
+    <div class="pg-sub">Current year leave entitlements for all faculty.</div>
+    <div class="card">
+      <div class="card-title"><span>Faculty Balances</span><button class="btn btn-g btn-sm" onclick="loadBalances()">↻ Refresh</button></div>
+      <div id="bal-content" style="color:var(--text3);font-family:'JetBrains Mono',monospace;font-size:12px;padding:14px">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Apply OD -->
+  <div class="page" id="page-od">
+    <div class="pg-title">Apply On-Duty</div>
+    <div class="pg-sub">Submit On-Duty application for official work outside campus.</div>
+    <div class="card">
+      <div class="card-title">🚗 OD Application</div>
+      <div class="form-grid">
+        <div class="fg"><label class="fl">Employee ID *</label><input class="fi" id="od-id" placeholder="FAC001"></div>
+        <div class="fg"><label class="fl">Date *</label><input class="fi" type="date" id="od-date"></div>
+        <div class="fg"><label class="fl">Session</label>
+          <select class="fs" id="od-sess">
+            <option value="FULL">Full Day</option>
+            <option value="AM">Morning (AM)</option>
+            <option value="PM">Afternoon (PM)</option>
+          </select>
+        </div>
+        <div class="fg"><label class="fl">Destination</label><input class="fi" id="od-dest" placeholder="Location / institution"></div>
+        <div class="fg form-full"><label class="fl">Purpose *</label><textarea class="fta" id="od-purpose" placeholder="Official purpose for the OD..."></textarea></div>
+      </div>
+      <div style="margin-top:13px;display:flex;gap:8px">
+        <button class="btn btn-p" onclick="submitOD()">Submit OD Application</button>
+        <button class="btn btn-g" onclick="['od-id','od-dest','od-purpose'].forEach(i=>document.getElementById(i).value='')">Clear</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="toast-box" id="toasts"></div>
+
+<script>
+// Defaults
+const today=new Date().toISOString().slice(0,10);
+document.getElementById('ov-date').value=today;
+document.getElementById('lv-from').value=today;
+document.getElementById('lv-to').value=today;
+document.getElementById('od-date').value=today;
+
+// Navigation
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
+  document.getElementById('page-'+name)?.classList.add('active');
+  document.getElementById('ni-'+name)?.classList.add('active');
+  if(name==='audit')loadAudit();
+  if(name==='pending')loadPending();
+  if(name==='balances')loadBalances();
+}
+
+// Toast
+function toast(msg,type='ok'){
+  const box=document.getElementById('toasts');
+  const t=document.createElement('div');
+  t.className=`toast ${type==='ok'?'tg':type==='err'?'te':'tw'}`;
+  t.innerHTML=`<span>${type==='ok'?'✅':type==='err'?'❌':'⚠️'}</span><span>${msg}</span>`;
+  box.prepend(t);setTimeout(()=>t.remove(),4500);
+}
+
+// API
+async function api(path,method='GET',body=null){
+  const o={method,headers:{'Content-Type':'application/json'}};
+  if(body)o.body=JSON.stringify(body);
+  const r=await fetch(path,o);
+  const d=await r.json().catch(()=>null);
+  if(!r.ok)throw new Error(d?.detail||r.statusText);
+  return d;
+}
+
+// Override
+async function submitOverride(){
+  const id=document.getElementById('ov-id').value.trim();
+  const dt=document.getElementById('ov-date').value;
+  const st=document.getElementById('ov-status').value;
+  const rs=document.getElementById('ov-reason').value.trim();
+  const by=document.getElementById('ov-by').value.trim()||'admin';
+  const fs=document.getElementById('ov-first').value||null;
+  const ls=document.getElementById('ov-last').value||null;
+  if(!id||!dt||!rs){toast('Employee ID, Date and Reason are all required','err');return;}
+  try{
+    const r=await api('/hr/override','POST',{employee_id:id,work_date:dt,new_status:st,reason:rs,overridden_by:by,first_seen:fs,last_seen:ls});
+    toast(`Override applied: ${r.changed_from||'—'} → ${r.changed_to}`);
+  }catch(e){toast(e.message,'err');}
+}
+
+// Leave
+async function submitLeave(){
+  const id=document.getElementById('lv-id').value.trim();
+  const lt=document.getElementById('lv-type').value;
+  const fd=document.getElementById('lv-from').value;
+  const td=document.getElementById('lv-to').value;
+  const days=parseFloat(document.getElementById('lv-days').value);
+  const rs=document.getElementById('lv-reason').value.trim();
+  const doc=document.getElementById('lv-doc').value.trim();
+  if(!id||!fd||!days){toast('Employee ID, Date and Days are required','err');return;}
+  try{
+    const r=await api('/hr/leave/apply','POST',{employee_id:id,leave_type:lt,from_date:fd,to_date:td,days,reason:rs,document_ref:doc});
+    toast(`Leave submitted — Application #${r.application_id}`);
+  }catch(e){toast(e.message,'err');}
+}
+
+// OD
+async function submitOD(){
+  const id=document.getElementById('od-id').value.trim();
+  const dt=document.getElementById('od-date').value;
+  const pur=document.getElementById('od-purpose').value.trim();
+  const dest=document.getElementById('od-dest').value.trim();
+  const sess=document.getElementById('od-sess').value;
+  if(!id||!dt||!pur){toast('Employee ID, Date and Purpose are required','err');return;}
+  try{
+    const r=await api('/hr/od/apply','POST',{employee_id:id,od_date:dt,purpose:pur,destination:dest,session:sess});
+    toast(`OD submitted — Application #${r.application_id}`);
+  }catch(e){toast(e.message,'err');}
+}
+
+// Audit trail
+async function loadAudit(){
+  const tb=document.getElementById('audit-body');
+  try{
+    const rows=await api('/hr/overrides');
+    if(!rows.length){tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--text3);padding:16px">No overrides yet</td></tr>';return;}
+    tb.innerHTML=rows.map(r=>`<tr>
+      <td class="tm">${r.work_date}</td>
+      <td class="tid">${r.employee_id}</td>
+      <td><span class="chip ca">${r.original_status||'—'}</span></td>
+      <td><span class="chip cp">${r.override_status}</span></td>
+      <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text2)">${r.override_reason}</td>
+      <td class="tm">${r.overridden_by}</td>
+      <td class="tm">${(r.overridden_at||'').slice(0,16)}</td>
+    </tr>`).join('');
+  }catch(e){toast('Failed to load audit trail','err');}
+}
+
+// Pending
+async function loadPending(){
+  try{
+    const d=await api('/hr/pending');
+    const total=d.leave.length+d.od.length;
+    document.getElementById('pp').textContent=`⏳ ${total} Pending`;
+    document.getElementById('nb').textContent=total;
+
+    const lb=document.getElementById('lv-body');
+    if(!d.leave.length)lb.innerHTML='<tr><td colspan="8" style="text-align:center;color:var(--text3);padding:14px">No pending leave applications</td></tr>';
+    else lb.innerHTML=d.leave.map(r=>`<tr>
+      <td class="tm">#${r.id}</td><td class="tid">${r.employee_id}</td>
+      <td>${r.leave_type}</td><td>${r.from_date}</td><td>${r.to_date}</td><td>${r.days}</td>
+      <td><span class="chip cy">${r.status}</span></td>
+      <td style="white-space:nowrap">
+        <button class="btn btn-s btn-sm" onclick="approveLv(${r.id})">✓</button>
+        <button class="btn btn-d btn-sm" style="margin-left:3px" onclick="rejectLv(${r.id})">✕</button>
+      </td>
+    </tr>`).join('');
+
+    const ob=document.getElementById('od-body');
+    if(!d.od.length)ob.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--text3);padding:14px">No pending OD applications</td></tr>';
+    else ob.innerHTML=d.od.map(r=>`<tr>
+      <td class="tm">#${r.id}</td><td class="tid">${r.employee_id}</td>
+      <td>${r.od_date}</td>
+      <td style="max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.purpose}</td>
+      <td>${r.session}</td><td><span class="chip cy">${r.status}</span></td>
+      <td><button class="btn btn-s btn-sm" onclick="approveOD(${r.id})">✓ Approve</button></td>
+    </tr>`).join('');
+  }catch(e){toast('Failed to load pending','err');}
+}
+
+async function approveLv(id){try{await api(`/hr/leave/approve/${id}`,'POST',{approved_by:'admin'});toast(`Leave #${id} approved`);loadPending();}catch(e){toast(e.message,'err');}}
+async function rejectLv(id){const r=prompt('Rejection reason:');if(!r)return;try{await api(`/hr/leave/reject/${id}`,'POST',{rejected_by:'admin',reason:r});toast(`Leave #${id} rejected`,'warn');loadPending();}catch(e){toast(e.message,'err');}}
+async function approveOD(id){try{await api(`/hr/od/approve/${id}`,'POST',{approved_by:'admin'});toast(`OD #${id} approved`);loadPending();}catch(e){toast(e.message,'err');}}
+
+// Balances
+async function loadBalances(){
+  const el=document.getElementById('bal-content');
+  try{
+    const fac=await api('/api/faculty');
+    if(!fac.length){el.textContent='No faculty enrolled';return;}
+    el.innerHTML=`<table class="dtbl">
+      <thead><tr><th>ID</th><th>Name</th><th>Dept</th><th>Face</th></tr></thead>
+      <tbody>${fac.map(f=>`<tr>
+        <td class="tid">${f.employee_id}</td>
+        <td class="tn">${f.name}</td>
+        <td style="color:var(--text2)">${f.department||'—'}</td>
+        <td><span class="chip ${f.face_enrolled?'cp':'ca'}">${f.face_enrolled?'✓ Enrolled':'✗ Not enrolled'}</span></td>
+      </tr>`).join('')}</tbody>
+    </table>`;
+  }catch(e){el.textContent='Failed to load faculty data';}
+}
+
+loadPending();
+</script>
+</body>
+</html>

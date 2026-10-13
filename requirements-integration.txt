@@ -1,0 +1,19 @@
+# Prefer the first project's already working ML environment to retain versions.
+# This combined list is for a fresh environment and has not been runtime-tested here.
+-r requirements.txt
+-r adaface_source/requirements.txt
+transformers<5
+safetensors
+fvcore
+PyYAML
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+filterpy==1.4.5
+scipy==1.11.4
+loguru==0.7.2
+pydantic==2.5.2
+httpx==0.28.1
+python-dotenv==1.0.1
+Pillow
+RealESRGAN @ git+https://github.com/ai-forever/Real-ESRGAN.git

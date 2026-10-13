@@ -1,0 +1,45 @@
+# FaceTrack Pro — Python dependencies
+# Target: HP Pro Tower 280 G9 E (Intel i7-14700, Intel UHD 770)
+# Works on Windows 11 Pro or Ubuntu Linux — see SETUP_LINUX.md for Linux
+# setup, or HP_DEPLOYMENT_CHANGES.md for the original Windows setup.
+# NOTE: No NVIDIA GPU on this box — CPU-only inference. GPU lines from the
+# original Jetson build are kept below (commented) for reference only.
+# Install (after creating a Python 3.11 venv): pip install -r requirements.txt
+#
+# Camera decode: on Windows, GStreamer isn't readily available, so
+# camera_reader.py falls back to OpenCV + FFmpeg automatically (bundled in
+# the opencv-python wheel, nothing extra to install). On Ubuntu, GStreamer
+# CAN work for lower latency — see SETUP_LINUX.md step 2 for the optional
+# system packages.
+
+# ── Web framework ────────────────────────────────────────────
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# ── AI / Vision ──────────────────────────────────────────────
+insightface==2.0
+# CPU inference (was onnxruntime-gpu==1.16.3 on Jetson):
+onnxruntime==1.20.1
+
+# ── FAISS ────────────────────────────────────────────────────
+# CPU index (was faiss-gpu==1.7.4 on Jetson):
+faiss-cpu==1.8.0.post1
+
+# ── Computer vision ──────────────────────────────────────────
+opencv-python==4.10.0.84
+numpy==1.26.4
+ultralytics==8.4.146
+
+# ── Tracking ─────────────────────────────────────────────────
+filterpy==1.4.5
+scipy==1.11.4
+
+# ── Utilities ────────────────────────────────────────────────
+loguru==0.7.2
+pydantic==2.5.2
+
+# ── AI Intelligence Suite (Claude API calls) ───────────────────
+# Keep httpx aligned with ultralytics-platform's dependency range.
+httpx==0.28.1
+python-dotenv==1.0.1

@@ -1,0 +1,168 @@
+{
+  "student_count": 53,
+  "total_embeddings": 200,
+  "faiss_vectors": 200,
+  "embedding_dimension": 512,
+  "students": {
+    "A AJAY": {
+      "templates": 4
+    },
+    "A KAVYA": {
+      "templates": 4
+    },
+    "A NAVANITHA": {
+      "templates": 2
+    },
+    "A NITHILA": {
+      "templates": 4
+    },
+    "B HARIHARAN": {
+      "templates": 4
+    },
+    "B LATHIKA": {
+      "templates": 4
+    },
+    "B PRAVEEN KUMAR": {
+      "templates": 4
+    },
+    "H ARSATH": {
+      "templates": 3
+    },
+    "HARISH": {
+      "templates": 4
+    },
+    "J JAVITH ALI": {
+      "templates": 4
+    },
+    "J SUBIGSHAA SHRI": {
+      "templates": 4
+    },
+    "J VISHALI": {
+      "templates": 4
+    },
+    "K BHUVANESWARAN": {
+      "templates": 4
+    },
+    "K GUNASRI": {
+      "templates": 4
+    },
+    "K HARINI": {
+      "templates": 4
+    },
+    "K RATHI MEENA": {
+      "templates": 4
+    },
+    "K SUGAPRIYA": {
+      "templates": 4
+    },
+    "KALPANA": {
+      "templates": 4
+    },
+    "M ABDUL BASITH": {
+      "templates": 7
+    },
+    "M JEEVA": {
+      "templates": 4
+    },
+    "M MOHAMED FARVES": {
+      "templates": 4
+    },
+    "M NISHA": {
+      "templates": 4
+    },
+    "M NIVEYA": {
+      "templates": 4
+    },
+    "M RIFAAS": {
+      "templates": 4
+    },
+    "M SAKTHIVEL": {
+      "templates": 4
+    },
+    "M SHANOFAR": {
+      "templates": 3
+    },
+    "M SHASHILEKHA": {
+      "templates": 5
+    },
+    "MOHAMED YUSUF": {
+      "templates": 2
+    },
+    "N HARIBALAN": {
+      "templates": 4
+    },
+    "P ANUSUYA": {
+      "templates": 4
+    },
+    "P SOUNDARYA": {
+      "templates": 2
+    },
+    "R MAKESWARAN": {
+      "templates": 4
+    },
+    "R NAGATHAMMAL": {
+      "templates": 4
+    },
+    "R RESHMA": {
+      "templates": 3
+    },
+    "R RITHISHA": {
+      "templates": 4
+    },
+    "R SARASWATHI": {
+      "templates": 3
+    },
+    "S ADHIRAJ": {
+      "templates": 3
+    },
+    "S DEVANESAN": {
+      "templates": 4
+    },
+    "S GOPILA SRI": {
+      "templates": 4
+    },
+    "S KEERTHIKA": {
+      "templates": 4
+    },
+    "S MOHAMED IMRAN": {
+      "templates": 4
+    },
+    "S MOHAMED KAIF": {
+      "templates": 4
+    },
+    "S MOSHITHA": {
+      "templates": 5
+    },
+    "S NEELA SRI": {
+      "templates": 2
+    },
+    "S RAVEENA": {
+      "templates": 4
+    },
+    "S SHOBANA": {
+      "templates": 3
+    },
+    "T YOGAPRIYA": {
+      "templates": 4
+    },
+    "U SARITHA": {
+      "templates": 4
+    },
+    "V HARIPRIYA": {
+      "templates": 3
+    },
+    "V JAYASRI": {
+      "templates": 4
+    },
+    "V POOJASRI": {
+      "templates": 4
+    },
+    "V SHALINI": {
+      "templates": 2
+    },
+    "V SHANMUGAPRIYAN": {
+      "templates": 4
+    }
+  },
+  "failures": []
+}

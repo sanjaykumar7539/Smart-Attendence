@@ -1,0 +1,3176 @@
+{
+  ".env": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/.env",
+    "crc": 0,
+    "size": 0
+  },
+  ".gitignore": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/.gitignore",
+    "crc": 885909388,
+    "size": 623
+  },
+  "adaface_verifier.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/adaface_verifier.py",
+    "crc": 2229998705,
+    "size": 2558
+  },
+  "adaptive_recognition.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/adaptive_recognition.py",
+    "crc": 3381692012,
+    "size": 3612
+  },
+  "ADAPTIVE_RECOGNITION_README.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/ADAPTIVE_RECOGNITION_README.md",
+    "crc": 1990091473,
+    "size": 2534
+  },
+  "ai_engine_v2.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/ai_engine_v2.py",
+    "crc": 2640560923,
+    "size": 29090
+  },
+  "ai_routes_v2.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/ai_routes_v2.py",
+    "crc": 3846418488,
+    "size": 7050
+  },
+  "attendance.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/attendance.py",
+    "crc": 3685983293,
+    "size": 8859
+  },
+  "audit_engine.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/audit_engine.py",
+    "crc": 3867277157,
+    "size": 14951
+  },
+  "backup_attendance.bat": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/backup_attendance.bat",
+    "crc": 4068426449,
+    "size": 1107
+  },
+  "camera_reader.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/camera_reader.py",
+    "crc": 2907158378,
+    "size": 19027
+  },
+  "college_events.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/college_events.json",
+    "crc": 3699355750,
+    "size": 138
+  },
+  "config.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/config.py",
+    "crc": 3731267484,
+    "size": 12876
+  },
+  "D10_20260818085505.mp4": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/D10_20260818085505.mp4",
+    "crc": 3477678117,
+    "size": 773766924
+  },
+  "database/attendance.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/database/attendance.db",
+    "crc": 2997657247,
+    "size": 90112
+  },
+  "database/backups/attendance_20260910_154141_141196.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/database/backups/attendance_20260910_154141_141196.db",
+    "crc": 3446658760,
+    "size": 90112
+  },
+  "database/faculty_index.faiss": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/database/faculty_index.faiss",
+    "crc": 205831927,
+    "size": 20525
+  },
+  "database/faculty_meta.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/database/faculty_meta.json",
+    "crc": 2591758362,
+    "size": 133
+  },
+  "database.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/database.py",
+    "crc": 1446508282,
+    "size": 22694
+  },
+  "dataset/A AJAY/1U4A6624.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A AJAY/1U4A6624.JPG",
+    "crc": 1413012472,
+    "size": 4157348
+  },
+  "dataset/A AJAY/1U4A6625.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A AJAY/1U4A6625.JPG",
+    "crc": 626826342,
+    "size": 4427312
+  },
+  "dataset/A AJAY/1U4A6626.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A AJAY/1U4A6626.JPG",
+    "crc": 2385452050,
+    "size": 4907554
+  },
+  "dataset/A AJAY/1U4A6627.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A AJAY/1U4A6627.JPG",
+    "crc": 172843823,
+    "size": 4686806
+  },
+  "dataset/A FASILAA/1U4A6651.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A FASILAA/1U4A6651.JPG",
+    "crc": 2858767347,
+    "size": 3836983
+  },
+  "dataset/A FASILAA/1U4A6652.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A FASILAA/1U4A6652.JPG",
+    "crc": 3534242308,
+    "size": 3541495
+  },
+  "dataset/A FASILAA/1U4A6653.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A FASILAA/1U4A6653.JPG",
+    "crc": 2925861221,
+    "size": 3641037
+  },
+  "dataset/A FASILAA/1U4A6654.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A FASILAA/1U4A6654.JPG",
+    "crc": 996534411,
+    "size": 4229682
+  },
+  "dataset/A KAVYA/1U4A6704.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A KAVYA/1U4A6704.JPG",
+    "crc": 2888270333,
+    "size": 5127065
+  },
+  "dataset/A KAVYA/1U4A6705.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A KAVYA/1U4A6705.JPG",
+    "crc": 1977325196,
+    "size": 5098877
+  },
+  "dataset/A KAVYA/1U4A6706.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A KAVYA/1U4A6706.JPG",
+    "crc": 2504026783,
+    "size": 4858404
+  },
+  "dataset/A KAVYA/1U4A6707.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A KAVYA/1U4A6707.JPG",
+    "crc": 3787734561,
+    "size": 4529093
+  },
+  "dataset/A NAVANITHA/1U4A6749.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NAVANITHA/1U4A6749.JPG",
+    "crc": 1861287753,
+    "size": 4455542
+  },
+  "dataset/A NAVANITHA/1U4A6750.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NAVANITHA/1U4A6750.JPG",
+    "crc": 3958304988,
+    "size": 4023937
+  },
+  "dataset/A NAVANITHA/1U4A6751.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NAVANITHA/1U4A6751.JPG",
+    "crc": 3072461859,
+    "size": 4619714
+  },
+  "dataset/A NAVANITHA/1U4A6752.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NAVANITHA/1U4A6752.JPG",
+    "crc": 1445077352,
+    "size": 4046262
+  },
+  "dataset/A NITHILA/1U4A6768.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NITHILA/1U4A6768.JPG",
+    "crc": 2253850007,
+    "size": 4395416
+  },
+  "dataset/A NITHILA/1U4A6769.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NITHILA/1U4A6769.JPG",
+    "crc": 224405601,
+    "size": 4622421
+  },
+  "dataset/A NITHILA/1U4A6770.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NITHILA/1U4A6770.JPG",
+    "crc": 2815081951,
+    "size": 4083572
+  },
+  "dataset/A NITHILA/1U4A6771.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NITHILA/1U4A6771.JPG",
+    "crc": 2738396382,
+    "size": 4388142
+  },
+  "dataset/A NITHILA/1U4A6772.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/A NITHILA/1U4A6772.JPG",
+    "crc": 3633873791,
+    "size": 5243747
+  },
+  "dataset/B HARIHARAN/1U4A6672.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B HARIHARAN/1U4A6672.JPG",
+    "crc": 1394606540,
+    "size": 4822498
+  },
+  "dataset/B HARIHARAN/1U4A6673.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B HARIHARAN/1U4A6673.JPG",
+    "crc": 2585361823,
+    "size": 4771158
+  },
+  "dataset/B HARIHARAN/1U4A6674.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B HARIHARAN/1U4A6674.JPG",
+    "crc": 2762599816,
+    "size": 4939356
+  },
+  "dataset/B HARIHARAN/1U4A6675.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B HARIHARAN/1U4A6675.JPG",
+    "crc": 3085224482,
+    "size": 4756264
+  },
+  "dataset/B LATHIKA/1U4A6713.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B LATHIKA/1U4A6713.JPG",
+    "crc": 3956938457,
+    "size": 5011836
+  },
+  "dataset/B LATHIKA/1U4A6714.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B LATHIKA/1U4A6714.JPG",
+    "crc": 2389249871,
+    "size": 4749922
+  },
+  "dataset/B LATHIKA/1U4A6715.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B LATHIKA/1U4A6715.JPG",
+    "crc": 3061289165,
+    "size": 5048188
+  },
+  "dataset/B LATHIKA/1U4A6716.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B LATHIKA/1U4A6716.JPG",
+    "crc": 3133359282,
+    "size": 5367815
+  },
+  "dataset/B PRAVEEN KUMAR/1U4A6782.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B PRAVEEN KUMAR/1U4A6782.JPG",
+    "crc": 118712285,
+    "size": 4701002
+  },
+  "dataset/B PRAVEEN KUMAR/1U4A6783.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B PRAVEEN KUMAR/1U4A6783.JPG",
+    "crc": 2674469482,
+    "size": 4329165
+  },
+  "dataset/B PRAVEEN KUMAR/1U4A6784.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B PRAVEEN KUMAR/1U4A6784.JPG",
+    "crc": 3679160916,
+    "size": 4746253
+  },
+  "dataset/B PRAVEEN KUMAR/1U4A6785.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/B PRAVEEN KUMAR/1U4A6785.JPG",
+    "crc": 745302807,
+    "size": 4851332
+  },
+  "dataset/H ARSATH/1U4A6633.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/H ARSATH/1U4A6633.JPG",
+    "crc": 3583797569,
+    "size": 4060190
+  },
+  "dataset/H ARSATH/1U4A6634.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/H ARSATH/1U4A6634.JPG",
+    "crc": 3493905061,
+    "size": 4167304
+  },
+  "dataset/H ARSATH/1U4A6635.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/H ARSATH/1U4A6635.JPG",
+    "crc": 2426383686,
+    "size": 4317124
+  },
+  "dataset/H ARSATH/1U4A6636.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/H ARSATH/1U4A6636.JPG",
+    "crc": 180779385,
+    "size": 4166249
+  },
+  "dataset/HARISH/1U4A6681.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/HARISH/1U4A6681.JPG",
+    "crc": 3655552444,
+    "size": 5779257
+  },
+  "dataset/HARISH/1U4A6682.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/HARISH/1U4A6682.JPG",
+    "crc": 1360151769,
+    "size": 5780051
+  },
+  "dataset/HARISH/1U4A6683.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/HARISH/1U4A6683.JPG",
+    "crc": 3840028595,
+    "size": 6026435
+  },
+  "dataset/HARISH/1U4A6684.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/HARISH/1U4A6684.JPG",
+    "crc": 2902340142,
+    "size": 5793882
+  },
+  "dataset/J JAVITH ALI/1U4A6685.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J JAVITH ALI/1U4A6685.JPG",
+    "crc": 2356075850,
+    "size": 5777356
+  },
+  "dataset/J JAVITH ALI/1U4A6686.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J JAVITH ALI/1U4A6686.JPG",
+    "crc": 1388646792,
+    "size": 5932381
+  },
+  "dataset/J JAVITH ALI/1U4A6687.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J JAVITH ALI/1U4A6687.JPG",
+    "crc": 2296495397,
+    "size": 5723253
+  },
+  "dataset/J JAVITH ALI/1U4A6688.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J JAVITH ALI/1U4A6688.JPG",
+    "crc": 3902652064,
+    "size": 5565592
+  },
+  "dataset/J SUBIGSHAA SHRI/1U4A6860.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J SUBIGSHAA SHRI/1U4A6860.JPG",
+    "crc": 4060658343,
+    "size": 4409704
+  },
+  "dataset/J SUBIGSHAA SHRI/1U4A6861.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J SUBIGSHAA SHRI/1U4A6861.JPG",
+    "crc": 2512522791,
+    "size": 4484874
+  },
+  "dataset/J SUBIGSHAA SHRI/1U4A6862.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J SUBIGSHAA SHRI/1U4A6862.JPG",
+    "crc": 2362548378,
+    "size": 4530811
+  },
+  "dataset/J SUBIGSHAA SHRI/1U4A6863.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J SUBIGSHAA SHRI/1U4A6863.JPG",
+    "crc": 1592720123,
+    "size": 4285652
+  },
+  "dataset/J VISHALI/1U4A6869.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J VISHALI/1U4A6869.JPG",
+    "crc": 2499792980,
+    "size": 4916910
+  },
+  "dataset/J VISHALI/1U4A6870.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J VISHALI/1U4A6870.JPG",
+    "crc": 527825244,
+    "size": 4531086
+  },
+  "dataset/J VISHALI/1U4A6871.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J VISHALI/1U4A6871.JPG",
+    "crc": 1928166072,
+    "size": 4853605
+  },
+  "dataset/J VISHALI/1U4A6872.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/J VISHALI/1U4A6872.JPG",
+    "crc": 2043525815,
+    "size": 4392701
+  },
+  "dataset/K BHUVANESWARAN/1U4A6638.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K BHUVANESWARAN/1U4A6638.JPG",
+    "crc": 3979383816,
+    "size": 4943542
+  },
+  "dataset/K BHUVANESWARAN/1U4A6639.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K BHUVANESWARAN/1U4A6639.JPG",
+    "crc": 708616049,
+    "size": 4353494
+  },
+  "dataset/K BHUVANESWARAN/1U4A6640.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K BHUVANESWARAN/1U4A6640.JPG",
+    "crc": 2713671195,
+    "size": 5103292
+  },
+  "dataset/K BHUVANESWARAN/1U4A6641.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K BHUVANESWARAN/1U4A6641.JPG",
+    "crc": 3561770202,
+    "size": 4180434
+  },
+  "dataset/K GUNASRI/1U4A6660.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K GUNASRI/1U4A6660.JPG",
+    "crc": 1640158430,
+    "size": 4232105
+  },
+  "dataset/K GUNASRI/1U4A6661.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K GUNASRI/1U4A6661.JPG",
+    "crc": 440404470,
+    "size": 4558775
+  },
+  "dataset/K GUNASRI/1U4A6662.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K GUNASRI/1U4A6662.JPG",
+    "crc": 542206921,
+    "size": 4656035
+  },
+  "dataset/K GUNASRI/1U4A6663.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K GUNASRI/1U4A6663.JPG",
+    "crc": 574573823,
+    "size": 4569352
+  },
+  "dataset/K HARINI/1U4A6664.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K HARINI/1U4A6664.JPG",
+    "crc": 1526164187,
+    "size": 3898181
+  },
+  "dataset/K HARINI/1U4A6665.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K HARINI/1U4A6665.JPG",
+    "crc": 3433368740,
+    "size": 3957876
+  },
+  "dataset/K HARINI/1U4A6666.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K HARINI/1U4A6666.JPG",
+    "crc": 1012064030,
+    "size": 4212963
+  },
+  "dataset/K HARINI/1U4A6667.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K HARINI/1U4A6667.JPG",
+    "crc": 1103600069,
+    "size": 4240270
+  },
+  "dataset/K RATHI MEENA/1U4A6787.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K RATHI MEENA/1U4A6787.JPG",
+    "crc": 3347848904,
+    "size": 4222872
+  },
+  "dataset/K RATHI MEENA/1U4A6788.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K RATHI MEENA/1U4A6788.JPG",
+    "crc": 3478468588,
+    "size": 4543164
+  },
+  "dataset/K RATHI MEENA/1U4A6789.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K RATHI MEENA/1U4A6789.JPG",
+    "crc": 2509922816,
+    "size": 4522716
+  },
+  "dataset/K RATHI MEENA/1U4A6790.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K RATHI MEENA/1U4A6790.JPG",
+    "crc": 2496458322,
+    "size": 4815659
+  },
+  "dataset/K SUGAPRIYA/1U4A6864.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K SUGAPRIYA/1U4A6864.JPG",
+    "crc": 819251858,
+    "size": 5379527
+  },
+  "dataset/K SUGAPRIYA/1U4A6865.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K SUGAPRIYA/1U4A6865.JPG",
+    "crc": 3146285948,
+    "size": 5507436
+  },
+  "dataset/K SUGAPRIYA/1U4A6866.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K SUGAPRIYA/1U4A6866.JPG",
+    "crc": 2121818997,
+    "size": 5688845
+  },
+  "dataset/K SUGAPRIYA/1U4A6867.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/K SUGAPRIYA/1U4A6867.JPG",
+    "crc": 3270358049,
+    "size": 5312248
+  },
+  "dataset/KALPANA/1U4A6699.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/KALPANA/1U4A6699.JPG",
+    "crc": 1475540707,
+    "size": 4354863
+  },
+  "dataset/KALPANA/1U4A6700.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/KALPANA/1U4A6700.JPG",
+    "crc": 2866698922,
+    "size": 4303745
+  },
+  "dataset/KALPANA/1U4A6701.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/KALPANA/1U4A6701.JPG",
+    "crc": 428670663,
+    "size": 4491518
+  },
+  "dataset/KALPANA/1U4A6702.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/KALPANA/1U4A6702.JPG",
+    "crc": 656837848,
+    "size": 4271364
+  },
+  "dataset/M ABDUL BASITH/1U4A6611.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6611.JPG",
+    "crc": 1930108551,
+    "size": 6152844
+  },
+  "dataset/M ABDUL BASITH/1U4A6612.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6612.JPG",
+    "crc": 2202335624,
+    "size": 6240330
+  },
+  "dataset/M ABDUL BASITH/1U4A6613.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6613.JPG",
+    "crc": 121919902,
+    "size": 6088422
+  },
+  "dataset/M ABDUL BASITH/1U4A6614.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6614.JPG",
+    "crc": 1328290428,
+    "size": 5511439
+  },
+  "dataset/M ABDUL BASITH/1U4A6615.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6615.JPG",
+    "crc": 3062387689,
+    "size": 6513555
+  },
+  "dataset/M ABDUL BASITH/1U4A6616.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6616.JPG",
+    "crc": 233519630,
+    "size": 6729833
+  },
+  "dataset/M ABDUL BASITH/1U4A6617.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M ABDUL BASITH/1U4A6617.JPG",
+    "crc": 2614530106,
+    "size": 5815654
+  },
+  "dataset/M JEEVA/1U4A6695.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M JEEVA/1U4A6695.JPG",
+    "crc": 209908728,
+    "size": 4382310
+  },
+  "dataset/M JEEVA/1U4A6696.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M JEEVA/1U4A6696.JPG",
+    "crc": 3420469783,
+    "size": 4671931
+  },
+  "dataset/M JEEVA/1U4A6697.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M JEEVA/1U4A6697.JPG",
+    "crc": 1798304341,
+    "size": 4564156
+  },
+  "dataset/M JEEVA/1U4A6698.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M JEEVA/1U4A6698.JPG",
+    "crc": 1548905274,
+    "size": 4411954
+  },
+  "dataset/M MOHAMED FARVES/1U4A6722.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M MOHAMED FARVES/1U4A6722.JPG",
+    "crc": 2961711918,
+    "size": 4840123
+  },
+  "dataset/M MOHAMED FARVES/1U4A6723.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M MOHAMED FARVES/1U4A6723.JPG",
+    "crc": 1866460924,
+    "size": 4908338
+  },
+  "dataset/M MOHAMED FARVES/1U4A6724.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M MOHAMED FARVES/1U4A6724.JPG",
+    "crc": 442939991,
+    "size": 4912231
+  },
+  "dataset/M MOHAMED FARVES/1U4A6725.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M MOHAMED FARVES/1U4A6725.JPG",
+    "crc": 3752650579,
+    "size": 4957224
+  },
+  "dataset/M NISHA/1U4A6758.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NISHA/1U4A6758.JPG",
+    "crc": 3171182044,
+    "size": 4160270
+  },
+  "dataset/M NISHA/1U4A6759.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NISHA/1U4A6759.JPG",
+    "crc": 2514090418,
+    "size": 4390676
+  },
+  "dataset/M NISHA/1U4A6760.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NISHA/1U4A6760.JPG",
+    "crc": 2044230133,
+    "size": 4226499
+  },
+  "dataset/M NISHA/1U4A6761.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NISHA/1U4A6761.JPG",
+    "crc": 2278033796,
+    "size": 4402368
+  },
+  "dataset/M NIVEYA/1U4A6773.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NIVEYA/1U4A6773.JPG",
+    "crc": 2114424935,
+    "size": 4792195
+  },
+  "dataset/M NIVEYA/1U4A6774.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NIVEYA/1U4A6774.JPG",
+    "crc": 1942495574,
+    "size": 4256733
+  },
+  "dataset/M NIVEYA/1U4A6775.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NIVEYA/1U4A6775.JPG",
+    "crc": 351498694,
+    "size": 4359916
+  },
+  "dataset/M NIVEYA/1U4A6776.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M NIVEYA/1U4A6776.JPG",
+    "crc": 1314376625,
+    "size": 4544020
+  },
+  "dataset/M RIFAAS/1U4A6806.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M RIFAAS/1U4A6806.JPG",
+    "crc": 1824260734,
+    "size": 4453641
+  },
+  "dataset/M RIFAAS/1U4A6807.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M RIFAAS/1U4A6807.JPG",
+    "crc": 3344339338,
+    "size": 4515069
+  },
+  "dataset/M RIFAAS/1U4A6808.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M RIFAAS/1U4A6808.JPG",
+    "crc": 2026864000,
+    "size": 4278283
+  },
+  "dataset/M RIFAAS/1U4A6809.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M RIFAAS/1U4A6809.JPG",
+    "crc": 902597088,
+    "size": 4508084
+  },
+  "dataset/M RIFAAS/1U4A6810.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M RIFAAS/1U4A6810.JPG",
+    "crc": 2855646278,
+    "size": 4748371
+  },
+  "dataset/M SAKTHIVEL/1U4A6817.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SAKTHIVEL/1U4A6817.JPG",
+    "crc": 267130776,
+    "size": 5701796
+  },
+  "dataset/M SAKTHIVEL/1U4A6818.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SAKTHIVEL/1U4A6818.JPG",
+    "crc": 2628072103,
+    "size": 6189402
+  },
+  "dataset/M SAKTHIVEL/1U4A6819.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SAKTHIVEL/1U4A6819.JPG",
+    "crc": 1765069147,
+    "size": 5920529
+  },
+  "dataset/M SAKTHIVEL/1U4A6820.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SAKTHIVEL/1U4A6820.JPG",
+    "crc": 1743365656,
+    "size": 5426667
+  },
+  "dataset/M SHANOFAR/1U4A6841.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHANOFAR/1U4A6841.JPG",
+    "crc": 144944708,
+    "size": 4271761
+  },
+  "dataset/M SHANOFAR/1U4A6842.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHANOFAR/1U4A6842.JPG",
+    "crc": 2313527731,
+    "size": 3885839
+  },
+  "dataset/M SHANOFAR/1U4A6843.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHANOFAR/1U4A6843.JPG",
+    "crc": 2056989406,
+    "size": 3603065
+  },
+  "dataset/M SHANOFAR/1U4A6844.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHANOFAR/1U4A6844.JPG",
+    "crc": 938984598,
+    "size": 4738759
+  },
+  "dataset/M SHASHILEKHA/1U4A6845.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHASHILEKHA/1U4A6845.JPG",
+    "crc": 1900716055,
+    "size": 5325408
+  },
+  "dataset/M SHASHILEKHA/1U4A6846.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHASHILEKHA/1U4A6846.JPG",
+    "crc": 597150743,
+    "size": 4930481
+  },
+  "dataset/M SHASHILEKHA/1U4A6847.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHASHILEKHA/1U4A6847.JPG",
+    "crc": 4050139622,
+    "size": 4810498
+  },
+  "dataset/M SHASHILEKHA/1U4A6848.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHASHILEKHA/1U4A6848.JPG",
+    "crc": 3820991551,
+    "size": 4543831
+  },
+  "dataset/M SHASHILEKHA/1U4A6849.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/M SHASHILEKHA/1U4A6849.JPG",
+    "crc": 4111087613,
+    "size": 4584219
+  },
+  "dataset/MIXED/1U4A6622.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6622.JPG",
+    "crc": 2081203692,
+    "size": 6639701
+  },
+  "dataset/MIXED/1U4A6623.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6623.JPG",
+    "crc": 2692787543,
+    "size": 7034160
+  },
+  "dataset/MIXED/1U4A6637.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6637.JPG",
+    "crc": 1281066322,
+    "size": 4762524
+  },
+  "dataset/MIXED/1U4A6646.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6646.JPG",
+    "crc": 119200028,
+    "size": 6206161
+  },
+  "dataset/MIXED/1U4A6655.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6655.JPG",
+    "crc": 3668231923,
+    "size": 3926849
+  },
+  "dataset/MIXED/1U4A6676.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6676.JPG",
+    "crc": 4094062862,
+    "size": 5599716
+  },
+  "dataset/MIXED/1U4A6689.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6689.JPG",
+    "crc": 1359327957,
+    "size": 7025665
+  },
+  "dataset/MIXED/1U4A6694.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6694.JPG",
+    "crc": 641811139,
+    "size": 4931443
+  },
+  "dataset/MIXED/1U4A6703.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6703.JPG",
+    "crc": 2341453916,
+    "size": 5402798
+  },
+  "dataset/MIXED/1U4A6712.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6712.JPG",
+    "crc": 226108442,
+    "size": 5934404
+  },
+  "dataset/MIXED/1U4A6726.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6726.JPG",
+    "crc": 2411255340,
+    "size": 6094381
+  },
+  "dataset/MIXED/1U4A6735.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6735.JPG",
+    "crc": 2389215401,
+    "size": 6366520
+  },
+  "dataset/MIXED/1U4A6741.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6741.JPG",
+    "crc": 3881308989,
+    "size": 5693642
+  },
+  "dataset/MIXED/1U4A6753.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6753.JPG",
+    "crc": 4126574616,
+    "size": 3977951
+  },
+  "dataset/MIXED/1U4A6762.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6762.JPG",
+    "crc": 370703072,
+    "size": 4342415
+  },
+  "dataset/MIXED/1U4A6763.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6763.JPG",
+    "crc": 1359525768,
+    "size": 4760472
+  },
+  "dataset/MIXED/1U4A6777.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6777.JPG",
+    "crc": 3853988191,
+    "size": 4686657
+  },
+  "dataset/MIXED/1U4A6786.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6786.JPG",
+    "crc": 2113306177,
+    "size": 4916584
+  },
+  "dataset/MIXED/1U4A6791.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6791.JPG",
+    "crc": 2219178763,
+    "size": 5992416
+  },
+  "dataset/MIXED/1U4A6805.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6805.JPG",
+    "crc": 2541766055,
+    "size": 6047676
+  },
+  "dataset/MIXED/1U4A6812.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6812.JPG",
+    "crc": 1237130938,
+    "size": 4534647
+  },
+  "dataset/MIXED/1U4A6825.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6825.JPG",
+    "crc": 2779598876,
+    "size": 6398296
+  },
+  "dataset/MIXED/1U4A6826.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6826.JPG",
+    "crc": 2278741182,
+    "size": 5920099
+  },
+  "dataset/MIXED/1U4A6831.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6831.JPG",
+    "crc": 2801549523,
+    "size": 4711627
+  },
+  "dataset/MIXED/1U4A6840.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6840.JPG",
+    "crc": 1103864920,
+    "size": 5375956
+  },
+  "dataset/MIXED/1U4A6850.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6850.JPG",
+    "crc": 2071483147,
+    "size": 4992659
+  },
+  "dataset/MIXED/1U4A6859.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6859.JPG",
+    "crc": 1918683268,
+    "size": 4654525
+  },
+  "dataset/MIXED/1U4A6868.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6868.JPG",
+    "crc": 1278885563,
+    "size": 4837700
+  },
+  "dataset/MIXED/1U4A6877.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MIXED/1U4A6877.JPG",
+    "crc": 3616454304,
+    "size": 6590700
+  },
+  "dataset/MOHAMED YUSUF/1U4A6879.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MOHAMED YUSUF/1U4A6879.JPG",
+    "crc": 534125386,
+    "size": 4311679
+  },
+  "dataset/MOHAMED YUSUF/1U4A6880.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MOHAMED YUSUF/1U4A6880.JPG",
+    "crc": 3164051066,
+    "size": 3817352
+  },
+  "dataset/MOHAMED YUSUF/1U4A6881.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MOHAMED YUSUF/1U4A6881.JPG",
+    "crc": 319987190,
+    "size": 3955921
+  },
+  "dataset/MOHAMED YUSUF/1U4A6882.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/MOHAMED YUSUF/1U4A6882.JPG",
+    "crc": 2208905390,
+    "size": 4078880
+  },
+  "dataset/N HARIBALAN/1U4A6668.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N HARIBALAN/1U4A6668.JPG",
+    "crc": 4061104994,
+    "size": 4387000
+  },
+  "dataset/N HARIBALAN/1U4A6669.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N HARIBALAN/1U4A6669.JPG",
+    "crc": 4125273774,
+    "size": 4311401
+  },
+  "dataset/N HARIBALAN/1U4A6670.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N HARIBALAN/1U4A6670.JPG",
+    "crc": 431890489,
+    "size": 4222399
+  },
+  "dataset/N HARIBALAN/1U4A6671.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N HARIBALAN/1U4A6671.JPG",
+    "crc": 3194296745,
+    "size": 4490863
+  },
+  "dataset/N NITHEESH/1U4A6764.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N NITHEESH/1U4A6764.JPG",
+    "crc": 977992500,
+    "size": 4044947
+  },
+  "dataset/N NITHEESH/1U4A6765.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N NITHEESH/1U4A6765.JPG",
+    "crc": 3858146016,
+    "size": 3907582
+  },
+  "dataset/N NITHEESH/1U4A6766.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N NITHEESH/1U4A6766.JPG",
+    "crc": 2561484829,
+    "size": 3741752
+  },
+  "dataset/N NITHEESH/1U4A6767.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/N NITHEESH/1U4A6767.JPG",
+    "crc": 1850547743,
+    "size": 3988808
+  },
+  "dataset/P ANUSUYA/1U4A6628.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P ANUSUYA/1U4A6628.JPG",
+    "crc": 965749366,
+    "size": 3627495
+  },
+  "dataset/P ANUSUYA/1U4A6629.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P ANUSUYA/1U4A6629.JPG",
+    "crc": 866844763,
+    "size": 3964261
+  },
+  "dataset/P ANUSUYA/1U4A6630.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P ANUSUYA/1U4A6630.JPG",
+    "crc": 1469666053,
+    "size": 4077621
+  },
+  "dataset/P ANUSUYA/1U4A6631.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P ANUSUYA/1U4A6631.JPG",
+    "crc": 3028832733,
+    "size": 4645277
+  },
+  "dataset/P ANUSUYA/1U4A6632.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P ANUSUYA/1U4A6632.JPG",
+    "crc": 2872772138,
+    "size": 4616917
+  },
+  "dataset/P SOUNDARYA/1U4A6855.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P SOUNDARYA/1U4A6855.JPG",
+    "crc": 1008811458,
+    "size": 3877266
+  },
+  "dataset/P SOUNDARYA/1U4A6856.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P SOUNDARYA/1U4A6856.JPG",
+    "crc": 3478340598,
+    "size": 3927512
+  },
+  "dataset/P SOUNDARYA/1U4A6857.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P SOUNDARYA/1U4A6857.JPG",
+    "crc": 1657688634,
+    "size": 4292436
+  },
+  "dataset/P SOUNDARYA/1U4A6858.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/P SOUNDARYA/1U4A6858.JPG",
+    "crc": 3995551891,
+    "size": 4384778
+  },
+  "dataset/R MAKESWARAN/1U4A6718.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R MAKESWARAN/1U4A6718.JPG",
+    "crc": 1002042075,
+    "size": 5913787
+  },
+  "dataset/R MAKESWARAN/1U4A6719.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R MAKESWARAN/1U4A6719.JPG",
+    "crc": 1897486023,
+    "size": 6307644
+  },
+  "dataset/R MAKESWARAN/1U4A6720.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R MAKESWARAN/1U4A6720.JPG",
+    "crc": 200135287,
+    "size": 5521393
+  },
+  "dataset/R MAKESWARAN/1U4A6721.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R MAKESWARAN/1U4A6721.JPG",
+    "crc": 834069099,
+    "size": 5739688
+  },
+  "dataset/R NAGATHAMMAL/1U4A6745.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R NAGATHAMMAL/1U4A6745.JPG",
+    "crc": 2049820957,
+    "size": 4441193
+  },
+  "dataset/R NAGATHAMMAL/1U4A6746.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R NAGATHAMMAL/1U4A6746.JPG",
+    "crc": 3414650248,
+    "size": 4612913
+  },
+  "dataset/R NAGATHAMMAL/1U4A6747.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R NAGATHAMMAL/1U4A6747.JPG",
+    "crc": 2742358139,
+    "size": 4203529
+  },
+  "dataset/R NAGATHAMMAL/1U4A6748.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R NAGATHAMMAL/1U4A6748.JPG",
+    "crc": 3944731597,
+    "size": 4374003
+  },
+  "dataset/R RESHMA/1U4A6801.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RESHMA/1U4A6801.JPG",
+    "crc": 2120347259,
+    "size": 4391418
+  },
+  "dataset/R RESHMA/1U4A6802.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RESHMA/1U4A6802.JPG",
+    "crc": 870793382,
+    "size": 4324824
+  },
+  "dataset/R RESHMA/1U4A6803.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RESHMA/1U4A6803.JPG",
+    "crc": 1674933109,
+    "size": 4049867
+  },
+  "dataset/R RESHMA/1U4A6804.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RESHMA/1U4A6804.JPG",
+    "crc": 458328111,
+    "size": 4161446
+  },
+  "dataset/R RITHISHA/1U4A6813.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RITHISHA/1U4A6813.JPG",
+    "crc": 3602117203,
+    "size": 4738531
+  },
+  "dataset/R RITHISHA/1U4A6814.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RITHISHA/1U4A6814.JPG",
+    "crc": 3833606357,
+    "size": 4879995
+  },
+  "dataset/R RITHISHA/1U4A6815.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RITHISHA/1U4A6815.JPG",
+    "crc": 3749377312,
+    "size": 5165403
+  },
+  "dataset/R RITHISHA/1U4A6816.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R RITHISHA/1U4A6816.JPG",
+    "crc": 3504258409,
+    "size": 5036075
+  },
+  "dataset/R SARASWATHI/1U4A6827.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R SARASWATHI/1U4A6827.JPG",
+    "crc": 2265110566,
+    "size": 3967400
+  },
+  "dataset/R SARASWATHI/1U4A6828.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R SARASWATHI/1U4A6828.JPG",
+    "crc": 26321945,
+    "size": 3828132
+  },
+  "dataset/R SARASWATHI/1U4A6829.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R SARASWATHI/1U4A6829.JPG",
+    "crc": 4070308478,
+    "size": 3968594
+  },
+  "dataset/R SARASWATHI/1U4A6830.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/R SARASWATHI/1U4A6830.JPG",
+    "crc": 3105942727,
+    "size": 4025346
+  },
+  "dataset/S ADHIRAJ/1U4A6618.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ADHIRAJ/1U4A6618.JPG",
+    "crc": 2132386460,
+    "size": 4127645
+  },
+  "dataset/S ADHIRAJ/1U4A6619.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ADHIRAJ/1U4A6619.JPG",
+    "crc": 1842240263,
+    "size": 3201873
+  },
+  "dataset/S ADHIRAJ/1U4A6620.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ADHIRAJ/1U4A6620.JPG",
+    "crc": 4031011908,
+    "size": 4542012
+  },
+  "dataset/S ADHIRAJ/1U4A6621.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ADHIRAJ/1U4A6621.JPG",
+    "crc": 978807489,
+    "size": 4659456
+  },
+  "dataset/S DEVANESAN/1U4A6642.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S DEVANESAN/1U4A6642.JPG",
+    "crc": 1147007996,
+    "size": 5158278
+  },
+  "dataset/S DEVANESAN/1U4A6643.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S DEVANESAN/1U4A6643.JPG",
+    "crc": 3934123611,
+    "size": 4224417
+  },
+  "dataset/S DEVANESAN/1U4A6644.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S DEVANESAN/1U4A6644.JPG",
+    "crc": 3969829608,
+    "size": 5182452
+  },
+  "dataset/S DEVANESAN/1U4A6645.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S DEVANESAN/1U4A6645.JPG",
+    "crc": 1035753534,
+    "size": 4964259
+  },
+  "dataset/S ELAF RAMZAN/1U4A6647.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ELAF RAMZAN/1U4A6647.JPG",
+    "crc": 4196637911,
+    "size": 3604398
+  },
+  "dataset/S ELAF RAMZAN/1U4A6648.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ELAF RAMZAN/1U4A6648.JPG",
+    "crc": 2401990535,
+    "size": 3495114
+  },
+  "dataset/S ELAF RAMZAN/1U4A6649.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ELAF RAMZAN/1U4A6649.JPG",
+    "crc": 2794428244,
+    "size": 3496173
+  },
+  "dataset/S ELAF RAMZAN/1U4A6650.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S ELAF RAMZAN/1U4A6650.JPG",
+    "crc": 3870498142,
+    "size": 3521484
+  },
+  "dataset/S GOPILA SRI/1U4A6656.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S GOPILA SRI/1U4A6656.JPG",
+    "crc": 2043850763,
+    "size": 5486602
+  },
+  "dataset/S GOPILA SRI/1U4A6657.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S GOPILA SRI/1U4A6657.JPG",
+    "crc": 4156047078,
+    "size": 5497775
+  },
+  "dataset/S GOPILA SRI/1U4A6658.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S GOPILA SRI/1U4A6658.JPG",
+    "crc": 4283724075,
+    "size": 4989581
+  },
+  "dataset/S GOPILA SRI/1U4A6659.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S GOPILA SRI/1U4A6659.JPG",
+    "crc": 1158304124,
+    "size": 5096102
+  },
+  "dataset/S KEERTHIKA/1U4A6708.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S KEERTHIKA/1U4A6708.JPG",
+    "crc": 1777026754,
+    "size": 5161168
+  },
+  "dataset/S KEERTHIKA/1U4A6709.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S KEERTHIKA/1U4A6709.JPG",
+    "crc": 2265395541,
+    "size": 4663976
+  },
+  "dataset/S KEERTHIKA/1U4A6710.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S KEERTHIKA/1U4A6710.JPG",
+    "crc": 857606695,
+    "size": 4391792
+  },
+  "dataset/S KEERTHIKA/1U4A6711.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S KEERTHIKA/1U4A6711.JPG",
+    "crc": 368706025,
+    "size": 4849801
+  },
+  "dataset/S MOHAMED IMRAN/1U4A6727.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED IMRAN/1U4A6727.JPG",
+    "crc": 1924435232,
+    "size": 5139885
+  },
+  "dataset/S MOHAMED IMRAN/1U4A6728.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED IMRAN/1U4A6728.JPG",
+    "crc": 1706460,
+    "size": 5245166
+  },
+  "dataset/S MOHAMED IMRAN/1U4A6729.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED IMRAN/1U4A6729.JPG",
+    "crc": 3960672245,
+    "size": 5360825
+  },
+  "dataset/S MOHAMED IMRAN/1U4A6730.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED IMRAN/1U4A6730.JPG",
+    "crc": 1381466920,
+    "size": 5194463
+  },
+  "dataset/S MOHAMED KAIF/1U4A6731.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED KAIF/1U4A6731.JPG",
+    "crc": 1830788466,
+    "size": 5274310
+  },
+  "dataset/S MOHAMED KAIF/1U4A6732.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED KAIF/1U4A6732.JPG",
+    "crc": 1783391435,
+    "size": 5241732
+  },
+  "dataset/S MOHAMED KAIF/1U4A6733.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED KAIF/1U4A6733.JPG",
+    "crc": 4072798019,
+    "size": 5366469
+  },
+  "dataset/S MOHAMED KAIF/1U4A6734.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOHAMED KAIF/1U4A6734.JPG",
+    "crc": 1843839515,
+    "size": 4620598
+  },
+  "dataset/S MOSHITHA/1U4A6736.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOSHITHA/1U4A6736.JPG",
+    "crc": 2594508707,
+    "size": 4430507
+  },
+  "dataset/S MOSHITHA/1U4A6737.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOSHITHA/1U4A6737.JPG",
+    "crc": 4280954306,
+    "size": 4264892
+  },
+  "dataset/S MOSHITHA/1U4A6738.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOSHITHA/1U4A6738.JPG",
+    "crc": 1985964981,
+    "size": 4311565
+  },
+  "dataset/S MOSHITHA/1U4A6739.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOSHITHA/1U4A6739.JPG",
+    "crc": 3138014626,
+    "size": 4503854
+  },
+  "dataset/S MOSHITHA/1U4A6740.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S MOSHITHA/1U4A6740.JPG",
+    "crc": 2060406896,
+    "size": 5021718
+  },
+  "dataset/S NEELA SRI/1U4A6754.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S NEELA SRI/1U4A6754.JPG",
+    "crc": 1023278816,
+    "size": 4191802
+  },
+  "dataset/S NEELA SRI/1U4A6755.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S NEELA SRI/1U4A6755.JPG",
+    "crc": 3995977173,
+    "size": 4065707
+  },
+  "dataset/S NEELA SRI/1U4A6756.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S NEELA SRI/1U4A6756.JPG",
+    "crc": 3869330688,
+    "size": 4324765
+  },
+  "dataset/S NEELA SRI/1U4A6757.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S NEELA SRI/1U4A6757.JPG",
+    "crc": 679281576,
+    "size": 4233576
+  },
+  "dataset/S RAVEENA/1U4A6792.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S RAVEENA/1U4A6792.JPG",
+    "crc": 2331640417,
+    "size": 4771407
+  },
+  "dataset/S RAVEENA/1U4A6793.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S RAVEENA/1U4A6793.JPG",
+    "crc": 2022783448,
+    "size": 4802243
+  },
+  "dataset/S RAVEENA/1U4A6794.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S RAVEENA/1U4A6794.JPG",
+    "crc": 3673487027,
+    "size": 4745682
+  },
+  "dataset/S RAVEENA/1U4A6795.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S RAVEENA/1U4A6795.JPG",
+    "crc": 1123507988,
+    "size": 5147958
+  },
+  "dataset/S SHOBANA/1U4A6851.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S SHOBANA/1U4A6851.JPG",
+    "crc": 1054954079,
+    "size": 4766617
+  },
+  "dataset/S SHOBANA/1U4A6852.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S SHOBANA/1U4A6852.JPG",
+    "crc": 1302621510,
+    "size": 4042099
+  },
+  "dataset/S SHOBANA/1U4A6853.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S SHOBANA/1U4A6853.JPG",
+    "crc": 1372751529,
+    "size": 4777860
+  },
+  "dataset/S SHOBANA/1U4A6854.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/S SHOBANA/1U4A6854.JPG",
+    "crc": 1755085037,
+    "size": 5398010
+  },
+  "dataset/T YOGAPRIYA/1U4A6873.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/T YOGAPRIYA/1U4A6873.JPG",
+    "crc": 334910493,
+    "size": 6052804
+  },
+  "dataset/T YOGAPRIYA/1U4A6874.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/T YOGAPRIYA/1U4A6874.JPG",
+    "crc": 3353851705,
+    "size": 5339455
+  },
+  "dataset/T YOGAPRIYA/1U4A6875.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/T YOGAPRIYA/1U4A6875.JPG",
+    "crc": 1959035947,
+    "size": 5509075
+  },
+  "dataset/T YOGAPRIYA/1U4A6876.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/T YOGAPRIYA/1U4A6876.JPG",
+    "crc": 3900686656,
+    "size": 5148882
+  },
+  "dataset/U SARITHA/1U4A6832.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/U SARITHA/1U4A6832.JPG",
+    "crc": 419795740,
+    "size": 5173210
+  },
+  "dataset/U SARITHA/1U4A6833.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/U SARITHA/1U4A6833.JPG",
+    "crc": 2512955828,
+    "size": 4626298
+  },
+  "dataset/U SARITHA/1U4A6834.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/U SARITHA/1U4A6834.JPG",
+    "crc": 4178975971,
+    "size": 4941994
+  },
+  "dataset/U SARITHA/1U4A6835.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/U SARITHA/1U4A6835.JPG",
+    "crc": 403388738,
+    "size": 5258089
+  },
+  "dataset/V HARIPRIYA/1U4A6677.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V HARIPRIYA/1U4A6677.JPG",
+    "crc": 2420974367,
+    "size": 4025098
+  },
+  "dataset/V HARIPRIYA/1U4A6678.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V HARIPRIYA/1U4A6678.JPG",
+    "crc": 1863083468,
+    "size": 3882946
+  },
+  "dataset/V HARIPRIYA/1U4A6679.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V HARIPRIYA/1U4A6679.JPG",
+    "crc": 2902867673,
+    "size": 4078938
+  },
+  "dataset/V HARIPRIYA/1U4A6680.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V HARIPRIYA/1U4A6680.JPG",
+    "crc": 2318406395,
+    "size": 4165087
+  },
+  "dataset/V JAYASRI/1U4A6690.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V JAYASRI/1U4A6690.JPG",
+    "crc": 835631164,
+    "size": 4435876
+  },
+  "dataset/V JAYASRI/1U4A6691.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V JAYASRI/1U4A6691.JPG",
+    "crc": 2680559557,
+    "size": 4071426
+  },
+  "dataset/V JAYASRI/1U4A6692.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V JAYASRI/1U4A6692.JPG",
+    "crc": 176700440,
+    "size": 4164734
+  },
+  "dataset/V JAYASRI/1U4A6693.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V JAYASRI/1U4A6693.JPG",
+    "crc": 1181874461,
+    "size": 4125383
+  },
+  "dataset/V POOJASRI/1U4A6778.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V POOJASRI/1U4A6778.JPG",
+    "crc": 802479817,
+    "size": 4589210
+  },
+  "dataset/V POOJASRI/1U4A6779.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V POOJASRI/1U4A6779.JPG",
+    "crc": 2125615861,
+    "size": 4397552
+  },
+  "dataset/V POOJASRI/1U4A6780.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V POOJASRI/1U4A6780.JPG",
+    "crc": 3161981239,
+    "size": 4671143
+  },
+  "dataset/V POOJASRI/1U4A6781.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V POOJASRI/1U4A6781.JPG",
+    "crc": 1052086951,
+    "size": 5198369
+  },
+  "dataset/V SHALINI/1U4A6836.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHALINI/1U4A6836.JPG",
+    "crc": 853058256,
+    "size": 4387268
+  },
+  "dataset/V SHALINI/1U4A6837.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHALINI/1U4A6837.JPG",
+    "crc": 2836881298,
+    "size": 4251788
+  },
+  "dataset/V SHALINI/1U4A6838.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHALINI/1U4A6838.JPG",
+    "crc": 2287619189,
+    "size": 4246199
+  },
+  "dataset/V SHALINI/1U4A6839.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHALINI/1U4A6839.JPG",
+    "crc": 1784302486,
+    "size": 4077785
+  },
+  "dataset/V SHANMUGAPRIYAN/1U4A6821.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHANMUGAPRIYAN/1U4A6821.JPG",
+    "crc": 71744910,
+    "size": 5165594
+  },
+  "dataset/V SHANMUGAPRIYAN/1U4A6822.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHANMUGAPRIYAN/1U4A6822.JPG",
+    "crc": 2938225181,
+    "size": 4992160
+  },
+  "dataset/V SHANMUGAPRIYAN/1U4A6823.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHANMUGAPRIYAN/1U4A6823.JPG",
+    "crc": 620661365,
+    "size": 4857010
+  },
+  "dataset/V SHANMUGAPRIYAN/1U4A6824.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/V SHANMUGAPRIYAN/1U4A6824.JPG",
+    "crc": 1329646592,
+    "size": 5109398
+  },
+  "dataset/Z RAZIK IMRAN/1U4A6796.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/Z RAZIK IMRAN/1U4A6796.JPG",
+    "crc": 1563172298,
+    "size": 4034793
+  },
+  "dataset/Z RAZIK IMRAN/1U4A6797.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/Z RAZIK IMRAN/1U4A6797.JPG",
+    "crc": 1761809655,
+    "size": 3261536
+  },
+  "dataset/Z RAZIK IMRAN/1U4A6798.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/Z RAZIK IMRAN/1U4A6798.JPG",
+    "crc": 2093145693,
+    "size": 3490300
+  },
+  "dataset/Z RAZIK IMRAN/1U4A6799.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/Z RAZIK IMRAN/1U4A6799.JPG",
+    "crc": 2727335497,
+    "size": 3800810
+  },
+  "dataset/Z RAZIK IMRAN/1U4A6800.JPG": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/dataset/Z RAZIK IMRAN/1U4A6800.JPG",
+    "crc": 4207403954,
+    "size": 3815287
+  },
+  "enroll.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/enroll.py",
+    "crc": 3499500554,
+    "size": 15644
+  },
+  "enroll_csbs_students.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/enroll_csbs_students.py",
+    "crc": 4097584796,
+    "size": 15711
+  },
+  "hlc_alert_engine.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_alert_engine.py",
+    "crc": 1127588158,
+    "size": 5493
+  },
+  "hlc_build_gallery.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_build_gallery.py",
+    "crc": 3480455222,
+    "size": 5339
+  },
+  "hlc_camera_config.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_camera_config.py",
+    "crc": 848036222,
+    "size": 9105
+  },
+  "hlc_eod_report.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_eod_report.py",
+    "crc": 3849437583,
+    "size": 8043
+  },
+  "hlc_exit_handler.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_exit_handler.py",
+    "crc": 2927178467,
+    "size": 2795
+  },
+  "hlc_export.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_export.py",
+    "crc": 4262712984,
+    "size": 1083
+  },
+  "hlc_gpu_benchmark_10.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_gpu_benchmark_10.py",
+    "crc": 623941689,
+    "size": 4142
+  },
+  "hlc_gpu_benchmark_228.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_gpu_benchmark_228.py",
+    "crc": 1039503877,
+    "size": 4975
+  },
+  "hlc_multiface_inspection.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_multiface_inspection.jpg",
+    "crc": 2723982801,
+    "size": 523707
+  },
+  "hlc_processor_v4.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_processor_v4.py",
+    "crc": 1088353511,
+    "size": 11884
+  },
+  "HLC_ROLE_AWARE_ALERTS_REWORK.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/HLC_ROLE_AWARE_ALERTS_REWORK.md",
+    "crc": 4126808029,
+    "size": 6135
+  },
+  "hlc_room_state.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_room_state.py",
+    "crc": 3827574185,
+    "size": 8602
+  },
+  "hlc_routes_v2.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_routes_v2.py",
+    "crc": 1159523249,
+    "size": 9895
+  },
+  "hlc_team.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_team.db",
+    "crc": 915402559,
+    "size": 28672
+  },
+  "hlc_team_db.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_team_db.py",
+    "crc": 3746702784,
+    "size": 7624
+  },
+  "hlc_validate_gallery.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_validate_gallery.py",
+    "crc": 3217582353,
+    "size": 5752
+  },
+  "hlc_visitors.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_visitors.db",
+    "crc": 98591190,
+    "size": 40960
+  },
+  "hlc_visitor_db_v4.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hlc_visitor_db_v4.py",
+    "crc": 2742725015,
+    "size": 20156
+  },
+  "HP_DEPLOYMENT_CHANGES.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/HP_DEPLOYMENT_CHANGES.md",
+    "crc": 139113725,
+    "size": 29138
+  },
+  "hr_database.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hr_database.py",
+    "crc": 1577987027,
+    "size": 20620
+  },
+  "hr_routes.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/hr_routes.py",
+    "crc": 4055060239,
+    "size": 5988
+  },
+  "inspect_hlc_multiface.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/inspect_hlc_multiface.py",
+    "crc": 1307892252,
+    "size": 2958
+  },
+  "logs/classroom_source.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/classroom_source.jpg",
+    "crc": 2681520119,
+    "size": 1063459
+  },
+  "logs/count_detection_comparison.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_detection_comparison.json",
+    "crc": 3240925182,
+    "size": 117
+  },
+  "logs/count_detection_updated.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_detection_updated.jpg",
+    "crc": 1528793016,
+    "size": 385188
+  },
+  "logs/count_merged_review.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_merged_review.jpg",
+    "crc": 2598537607,
+    "size": 392110
+  },
+  "logs/count_reference.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_reference.jpg",
+    "crc": 2580693078,
+    "size": 364879
+  },
+  "logs/count_tiled_960_review.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_tiled_960_review.jpg",
+    "crc": 3260191506,
+    "size": 394714
+  },
+  "logs/count_tiled_review.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_tiled_review.jpg",
+    "crc": 4004749201,
+    "size": 386271
+  },
+  "logs/count_tiles.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_tiles.json",
+    "crc": 1588709536,
+    "size": 7328
+  },
+  "logs/count_tiles_960.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/count_tiles_960.json",
+    "crc": 3124189875,
+    "size": 8730
+  },
+  "logs/detected_people_dashboard.png": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/detected_people_dashboard.png",
+    "crc": 3201563877,
+    "size": 992250
+  },
+  "logs/detection_after.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/detection_after.json",
+    "crc": 2849115588,
+    "size": 139
+  },
+  "logs/detection_before.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/detection_before.json",
+    "crc": 1567888084,
+    "size": 142
+  },
+  "logs/facetrack_2026-09-10.log": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/facetrack_2026-09-10.log",
+    "crc": 3154847198,
+    "size": 67576
+  },
+  "logs/facetrack_2026-09-11.log": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/facetrack_2026-09-11.log",
+    "crc": 2807143773,
+    "size": 6979
+  },
+  "logs/live_classroom_check.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/live_classroom_check.jpg",
+    "crc": 2701440970,
+    "size": 114027
+  },
+  "logs/motion_tracking_preview.png": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/motion_tracking_preview.png",
+    "crc": 341641544,
+    "size": 993475
+  },
+  "logs/smooth_video_preview.png": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/smooth_video_preview.png",
+    "crc": 2192351961,
+    "size": 994737
+  },
+  "logs/student_dashboard_counts.png": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/student_dashboard_counts.png",
+    "crc": 3956871678,
+    "size": 683131
+  },
+  "logs/student_dashboard_live_verified.png": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/student_dashboard_live_verified.png",
+    "crc": 392926003,
+    "size": 1371667
+  },
+  "logs/student_enrollment.log": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/student_enrollment.log",
+    "crc": 185326119,
+    "size": 10322
+  },
+  "logs/student_presence_live.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/student_presence_live.jpg",
+    "crc": 2847482514,
+    "size": 126437
+  },
+  "logs/yolo26_video_check.jpg": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/logs/yolo26_video_check.jpg",
+    "crc": 336796732,
+    "size": 378660
+  },
+  "main.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/main.py",
+    "crc": 4106458139,
+    "size": 49373
+  },
+  "MERGE_NOTES.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/MERGE_NOTES.md",
+    "crc": 169855586,
+    "size": 776
+  },
+  "models/models/buffalo_s/1k3d68.onnx": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/models/buffalo_s/1k3d68.onnx",
+    "crc": 1026395391,
+    "size": 143607619
+  },
+  "models/models/buffalo_s/2d106det.onnx": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/models/buffalo_s/2d106det.onnx",
+    "crc": 2254727486,
+    "size": 5030888
+  },
+  "models/models/buffalo_s/det_500m.onnx": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/models/buffalo_s/det_500m.onnx",
+    "crc": 1199286782,
+    "size": 2524817
+  },
+  "models/models/buffalo_s/genderage.onnx": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/models/buffalo_s/genderage.onnx",
+    "crc": 1602016819,
+    "size": 1322532
+  },
+  "models/models/buffalo_s/w600k_mbf.onnx": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/models/buffalo_s/w600k_mbf.onnx",
+    "crc": 1112042853,
+    "size": 13616099
+  },
+  "models/models/buffalo_s.zip": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/models/buffalo_s.zip",
+    "crc": 2266350825,
+    "size": 127607557
+  },
+  "models/ultralytics/Ultralytics/settings.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/ultralytics/Ultralytics/settings.json",
+    "crc": 508006700,
+    "size": 505
+  },
+  "models/yolo26n.pt": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/models/yolo26n.pt",
+    "crc": 1639307475,
+    "size": 5544453
+  },
+  "person_detection.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/person_detection.py",
+    "crc": 3869314919,
+    "size": 2252
+  },
+  "phase2_gpu_recognition.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/phase2_gpu_recognition.py",
+    "crc": 1416123235,
+    "size": 11418
+  },
+  "phase3_all_237_validation.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/phase3_all_237_validation.py",
+    "crc": 2836597329,
+    "size": 38639
+  },
+  "phase4_leave_one_out_validation.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/phase4_leave_one_out_validation.py",
+    "crc": 4012397058,
+    "size": 36928
+  },
+  "phase5_2_frame_sampling_benchmark.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/phase5_2_frame_sampling_benchmark.py",
+    "crc": 1982711738,
+    "size": 6144
+  },
+  "phase5_4_raw_recognition_2fps.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/phase5_4_raw_recognition_2fps.py",
+    "crc": 1567472854,
+    "size": 16879
+  },
+  "phase5_5_raw_audit.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/phase5_5_raw_audit.py",
+    "crc": 3561537509,
+    "size": 3319
+  },
+  "quality.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/quality.py",
+    "crc": 3452216931,
+    "size": 2091
+  },
+  "recognition.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/recognition.py",
+    "crc": 1145550541,
+    "size": 12167
+  },
+  "requirements-yolo26.txt": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/requirements-yolo26.txt",
+    "crc": 1994730785,
+    "size": 65
+  },
+  "requirements.txt": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/requirements.txt",
+    "crc": 4058118221,
+    "size": 2302
+  },
+  "run_facetrack.bat": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/run_facetrack.bat",
+    "crc": 2040798755,
+    "size": 974
+  },
+  "run_students.bat": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/run_students.bat",
+    "crc": 1272771524,
+    "size": 85
+  },
+  "run_students.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/run_students.py",
+    "crc": 2122413824,
+    "size": 4467
+  },
+  "run_video_test.bat": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/run_video_test.bat",
+    "crc": 3396691849,
+    "size": 355
+  },
+  "SETUP_LINUX.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/SETUP_LINUX.md",
+    "crc": 2068503085,
+    "size": 7995
+  },
+  "static/dashboard.html": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/static/dashboard.html",
+    "crc": 3340388146,
+    "size": 108852
+  },
+  "static/dashboard.original.html": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/static/dashboard.original.html",
+    "crc": 1836147545,
+    "size": 90797
+  },
+  "static/hr_admin.html": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/static/hr_admin.html",
+    "crc": 316740191,
+    "size": 23519
+  },
+  "STUDENT_ENROLLMENT.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/STUDENT_ENROLLMENT.md",
+    "crc": 2912403923,
+    "size": 4555
+  },
+  "student_index/backups/attendance_20260910_122419_895189.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/backups/attendance_20260910_122419_895189.db",
+    "crc": 3968663047,
+    "size": 98304
+  },
+  "student_index/backups/attendance_20260910_122426_339371.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/backups/attendance_20260910_122426_339371.db",
+    "crc": 4098418738,
+    "size": 98304
+  },
+  "student_index/backups/attendance_20260910_154141_153308.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/backups/attendance_20260910_154141_153308.db",
+    "crc": 672926466,
+    "size": 106496
+  },
+  "student_index/dataset_signature.txt": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/dataset_signature.txt",
+    "crc": 1596046020,
+    "size": 64
+  },
+  "student_index/enrollment_report.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/enrollment_report.json",
+    "crc": 2884275464,
+    "size": 9357
+  },
+  "student_index/runtime_meta.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/runtime_meta.json",
+    "crc": 440228835,
+    "size": 4190
+  },
+  "student_index/students.faiss": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/students.faiss",
+    "crc": 1305469838,
+    "size": 485421
+  },
+  "student_index/students.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/students.json",
+    "crc": 1873109918,
+    "size": 96848
+  },
+  "student_index/student_attendance.db": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/student_index/student_attendance.db",
+    "crc": 3980363896,
+    "size": 106496
+  },
+  "super_resolution.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/super_resolution.py",
+    "crc": 2574676448,
+    "size": 1493
+  },
+  "TASK_SCHEDULER_SETUP.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/TASK_SCHEDULER_SETUP.md",
+    "crc": 3534429948,
+    "size": 3353
+  },
+  "testing.mp4": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/testing.mp4",
+    "crc": 1644902791,
+    "size": 281555262
+  },
+  "test_adaptive_cases.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_adaptive_cases.py",
+    "crc": 3481536953,
+    "size": 4206
+  },
+  "test_adaptive_pipeline.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_adaptive_pipeline.py",
+    "crc": 130065055,
+    "size": 840
+  },
+  "test_person_detection.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_person_detection.py",
+    "crc": 1382800696,
+    "size": 1396
+  },
+  "test_presence_mode.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_presence_mode.py",
+    "crc": 121729659,
+    "size": 6560
+  },
+  "TEST_REPORT.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/TEST_REPORT.md",
+    "crc": 1187029183,
+    "size": 1314
+  },
+  "TEST_REPORT_180.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/TEST_REPORT_180.json",
+    "crc": 1764192905,
+    "size": 27267
+  },
+  "TEST_REPORT_180.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/TEST_REPORT_180.md",
+    "crc": 2396354756,
+    "size": 2733
+  },
+  "test_robustness_180.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_robustness_180.py",
+    "crc": 834866301,
+    "size": 3157
+  },
+  "test_tracker_recovery.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_tracker_recovery.py",
+    "crc": 3918681303,
+    "size": 1928
+  },
+  "test_video_preview.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/test_video_preview.py",
+    "crc": 2772272852,
+    "size": 4482
+  },
+  "tracker.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/tracker.py",
+    "crc": 3149156851,
+    "size": 8904
+  },
+  "Ultralytics/settings.json": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/Ultralytics/settings.json",
+    "crc": 508006700,
+    "size": 505
+  },
+  "VIDEO_MODE_TEST_REPORT.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/VIDEO_MODE_TEST_REPORT.md",
+    "crc": 2170770888,
+    "size": 754
+  },
+  "video_preview.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/video_preview.py",
+    "crc": 1682789423,
+    "size": 6514
+  },
+  "VIDEO_TEST_README.md": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/VIDEO_TEST_README.md",
+    "crc": 1742400259,
+    "size": 972
+  },
+  "yolo26_recognition.py": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/yolo26_recognition.py",
+    "crc": 2301872547,
+    "size": 3481
+  },
+  "__pycache__/adaface_verifier.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/adaface_verifier.cpython-311.pyc",
+    "crc": 2853691046,
+    "size": 6240
+  },
+  "__pycache__/adaface_verifier.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/adaface_verifier.cpython-313.pyc",
+    "crc": 3233556612,
+    "size": 5943
+  },
+  "__pycache__/adaptive_recognition.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/adaptive_recognition.cpython-311.pyc",
+    "crc": 1875028018,
+    "size": 7471
+  },
+  "__pycache__/adaptive_recognition.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/adaptive_recognition.cpython-313.pyc",
+    "crc": 2623349645,
+    "size": 7090
+  },
+  "__pycache__/ai_engine_v2.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/ai_engine_v2.cpython-311.pyc",
+    "crc": 2217116459,
+    "size": 34312
+  },
+  "__pycache__/ai_engine_v2.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/ai_engine_v2.cpython-313.pyc",
+    "crc": 2913902633,
+    "size": 32179
+  },
+  "__pycache__/ai_routes_v2.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/ai_routes_v2.cpython-311.pyc",
+    "crc": 1997907682,
+    "size": 9529
+  },
+  "__pycache__/ai_routes_v2.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/ai_routes_v2.cpython-313.pyc",
+    "crc": 4077404010,
+    "size": 8547
+  },
+  "__pycache__/attendance.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/attendance.cpython-311.pyc",
+    "crc": 797159927,
+    "size": 10728
+  },
+  "__pycache__/attendance.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/attendance.cpython-313.pyc",
+    "crc": 2784780448,
+    "size": 9552
+  },
+  "__pycache__/audit_engine.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/audit_engine.cpython-311.pyc",
+    "crc": 3123369812,
+    "size": 21681
+  },
+  "__pycache__/audit_engine.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/audit_engine.cpython-313.pyc",
+    "crc": 769662678,
+    "size": 19011
+  },
+  "__pycache__/camera_reader.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/camera_reader.cpython-311.pyc",
+    "crc": 2053102861,
+    "size": 26408
+  },
+  "__pycache__/camera_reader.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/camera_reader.cpython-313.pyc",
+    "crc": 3620526688,
+    "size": 24435
+  },
+  "__pycache__/config.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/config.cpython-311.pyc",
+    "crc": 841653812,
+    "size": 14103
+  },
+  "__pycache__/config.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/config.cpython-313.pyc",
+    "crc": 2182059682,
+    "size": 11866
+  },
+  "__pycache__/database.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/database.cpython-311.pyc",
+    "crc": 2213160351,
+    "size": 31793
+  },
+  "__pycache__/database.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/database.cpython-313.pyc",
+    "crc": 1709951392,
+    "size": 24072
+  },
+  "__pycache__/enroll.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/enroll.cpython-313.pyc",
+    "crc": 2594813202,
+    "size": 23548
+  },
+  "__pycache__/enroll_csbs_students.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/enroll_csbs_students.cpython-311.pyc",
+    "crc": 2692653180,
+    "size": 13271
+  },
+  "__pycache__/enroll_csbs_students.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/enroll_csbs_students.cpython-313.pyc",
+    "crc": 3513598145,
+    "size": 11775
+  },
+  "__pycache__/hlc_alert_engine.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_alert_engine.cpython-311.pyc",
+    "crc": 3881236550,
+    "size": 9154
+  },
+  "__pycache__/hlc_alert_engine.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_alert_engine.cpython-313.pyc",
+    "crc": 3686353361,
+    "size": 8592
+  },
+  "__pycache__/hlc_build_gallery.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_build_gallery.cpython-313.pyc",
+    "crc": 3982446603,
+    "size": 6324
+  },
+  "__pycache__/hlc_camera_config.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_camera_config.cpython-311.pyc",
+    "crc": 3050825649,
+    "size": 10127
+  },
+  "__pycache__/hlc_camera_config.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_camera_config.cpython-313.pyc",
+    "crc": 3381458124,
+    "size": 9195
+  },
+  "__pycache__/hlc_eod_report.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_eod_report.cpython-313.pyc",
+    "crc": 2760006234,
+    "size": 12836
+  },
+  "__pycache__/hlc_exit_handler.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_exit_handler.cpython-311.pyc",
+    "crc": 2211072598,
+    "size": 6005
+  },
+  "__pycache__/hlc_exit_handler.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_exit_handler.cpython-313.pyc",
+    "crc": 2079888884,
+    "size": 5537
+  },
+  "__pycache__/hlc_export.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_export.cpython-313.pyc",
+    "crc": 835173172,
+    "size": 2082
+  },
+  "__pycache__/hlc_gpu_benchmark_10.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_gpu_benchmark_10.cpython-313.pyc",
+    "crc": 3716867189,
+    "size": 4880
+  },
+  "__pycache__/hlc_gpu_benchmark_228.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_gpu_benchmark_228.cpython-313.pyc",
+    "crc": 1295279164,
+    "size": 6990
+  },
+  "__pycache__/hlc_processor_v4.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_processor_v4.cpython-311.pyc",
+    "crc": 4103326515,
+    "size": 9765
+  },
+  "__pycache__/hlc_processor_v4.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_processor_v4.cpython-313.pyc",
+    "crc": 228322281,
+    "size": 8780
+  },
+  "__pycache__/hlc_room_state.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_room_state.cpython-311.pyc",
+    "crc": 1237728168,
+    "size": 12468
+  },
+  "__pycache__/hlc_room_state.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_room_state.cpython-313.pyc",
+    "crc": 3214499318,
+    "size": 10801
+  },
+  "__pycache__/hlc_routes_v2.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_routes_v2.cpython-311.pyc",
+    "crc": 1217950843,
+    "size": 17633
+  },
+  "__pycache__/hlc_routes_v2.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_routes_v2.cpython-313.pyc",
+    "crc": 4059174486,
+    "size": 15226
+  },
+  "__pycache__/hlc_team_db.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_team_db.cpython-311.pyc",
+    "crc": 4050202572,
+    "size": 15953
+  },
+  "__pycache__/hlc_team_db.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_team_db.cpython-313.pyc",
+    "crc": 1076325803,
+    "size": 12861
+  },
+  "__pycache__/hlc_validate_gallery.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_validate_gallery.cpython-313.pyc",
+    "crc": 3138451683,
+    "size": 6431
+  },
+  "__pycache__/hlc_visitor_db_v4.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_visitor_db_v4.cpython-311.pyc",
+    "crc": 1512368508,
+    "size": 29523
+  },
+  "__pycache__/hlc_visitor_db_v4.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hlc_visitor_db_v4.cpython-313.pyc",
+    "crc": 2148002080,
+    "size": 25243
+  },
+  "__pycache__/hr_database.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hr_database.cpython-311.pyc",
+    "crc": 1712769643,
+    "size": 29817
+  },
+  "__pycache__/hr_database.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hr_database.cpython-313.pyc",
+    "crc": 872822178,
+    "size": 25344
+  },
+  "__pycache__/hr_routes.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hr_routes.cpython-311.pyc",
+    "crc": 3290336329,
+    "size": 10295
+  },
+  "__pycache__/hr_routes.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/hr_routes.cpython-313.pyc",
+    "crc": 409362928,
+    "size": 9460
+  },
+  "__pycache__/inspect_hlc_multiface.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/inspect_hlc_multiface.cpython-313.pyc",
+    "crc": 902131852,
+    "size": 4332
+  },
+  "__pycache__/main.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/main.cpython-311.pyc",
+    "crc": 456600140,
+    "size": 62834
+  },
+  "__pycache__/main.cpython-312.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/main.cpython-312.pyc",
+    "crc": 4075484147,
+    "size": 57429
+  },
+  "__pycache__/main.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/main.cpython-313.pyc",
+    "crc": 1791696090,
+    "size": 46123
+  },
+  "__pycache__/person_detection.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/person_detection.cpython-311.pyc",
+    "crc": 633269676,
+    "size": 4838
+  },
+  "__pycache__/phase2_gpu_recognition.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/phase2_gpu_recognition.cpython-313.pyc",
+    "crc": 2750326647,
+    "size": 10994
+  },
+  "__pycache__/phase3_all_237_validation.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/phase3_all_237_validation.cpython-313.pyc",
+    "crc": 4254049646,
+    "size": 28164
+  },
+  "__pycache__/phase4_leave_one_out_validation.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/phase4_leave_one_out_validation.cpython-313.pyc",
+    "crc": 4202404534,
+    "size": 25341
+  },
+  "__pycache__/phase5_2_frame_sampling_benchmark.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/phase5_2_frame_sampling_benchmark.cpython-313.pyc",
+    "crc": 3234084883,
+    "size": 7581
+  },
+  "__pycache__/phase5_4_raw_recognition_2fps.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/phase5_4_raw_recognition_2fps.cpython-313.pyc",
+    "crc": 1542254776,
+    "size": 13445
+  },
+  "__pycache__/phase5_5_raw_audit.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/phase5_5_raw_audit.cpython-313.pyc",
+    "crc": 1625089036,
+    "size": 5959
+  },
+  "__pycache__/quality.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/quality.cpython-311.pyc",
+    "crc": 3698926976,
+    "size": 5176
+  },
+  "__pycache__/quality.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/quality.cpython-313.pyc",
+    "crc": 726719639,
+    "size": 4750
+  },
+  "__pycache__/recognition.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/recognition.cpython-311.pyc",
+    "crc": 2739683989,
+    "size": 17061
+  },
+  "__pycache__/recognition.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/recognition.cpython-313.pyc",
+    "crc": 3727403751,
+    "size": 15910
+  },
+  "__pycache__/run_students.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/run_students.cpython-311.pyc",
+    "crc": 3395666351,
+    "size": 7772
+  },
+  "__pycache__/super_resolution.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/super_resolution.cpython-311.pyc",
+    "crc": 3218679516,
+    "size": 3566
+  },
+  "__pycache__/super_resolution.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/super_resolution.cpython-313.pyc",
+    "crc": 3010606086,
+    "size": 3454
+  },
+  "__pycache__/test_adaptive_cases.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_adaptive_cases.cpython-313.pyc",
+    "crc": 3971956519,
+    "size": 8677
+  },
+  "__pycache__/test_adaptive_pipeline.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_adaptive_pipeline.cpython-313.pyc",
+    "crc": 4077838663,
+    "size": 1784
+  },
+  "__pycache__/test_person_detection.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_person_detection.cpython-311.pyc",
+    "crc": 1654249923,
+    "size": 3602
+  },
+  "__pycache__/test_presence_mode.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_presence_mode.cpython-311.pyc",
+    "crc": 3841841145,
+    "size": 15639
+  },
+  "__pycache__/test_presence_mode.cpython-312.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_presence_mode.cpython-312.pyc",
+    "crc": 2581404162,
+    "size": 13313
+  },
+  "__pycache__/test_robustness_180.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_robustness_180.cpython-313.pyc",
+    "crc": 1695840676,
+    "size": 6358
+  },
+  "__pycache__/test_tracker_recovery.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_tracker_recovery.cpython-311.pyc",
+    "crc": 618831785,
+    "size": 4883
+  },
+  "__pycache__/test_video_preview.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_video_preview.cpython-311.pyc",
+    "crc": 4166322677,
+    "size": 11149
+  },
+  "__pycache__/test_video_preview.cpython-312.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/test_video_preview.cpython-312.pyc",
+    "crc": 995005261,
+    "size": 10144
+  },
+  "__pycache__/tracker.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/tracker.cpython-311.pyc",
+    "crc": 3234709675,
+    "size": 16751
+  },
+  "__pycache__/tracker.cpython-313.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/tracker.cpython-313.pyc",
+    "crc": 3170669466,
+    "size": 10539
+  },
+  "__pycache__/video_preview.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/video_preview.cpython-311.pyc",
+    "crc": 3256323868,
+    "size": 11892
+  },
+  "__pycache__/video_preview.cpython-312.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/video_preview.cpython-312.pyc",
+    "crc": 3956828478,
+    "size": 10502
+  },
+  "__pycache__/yolo26_recognition.cpython-311.pyc": {
+    "zip": "facetrack-egs-main.zip",
+    "entry": "facetrack-egs-main/__pycache__/yolo26_recognition.cpython-311.pyc",
+    "crc": 3780170161,
+    "size": 6713
+  },
+  "adaface_source/adaface_model/.cache/huggingface/.gitignore": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/.gitignore",
+    "crc": 163128923,
+    "size": 1
+  },
+  "adaface_source/adaface_model/.cache/huggingface/CACHEDIR.TAG": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/CACHEDIR.TAG",
+    "crc": 454985970,
+    "size": 195
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/config.json.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/config.json.metadata",
+    "crc": 3144435169,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/files.txt.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/files.txt.metadata",
+    "crc": 2793204306,
+    "size": 103
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/model.safetensors.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/model.safetensors.metadata",
+    "crc": 3388145641,
+    "size": 128
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/base/configs/example.yaml.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/base/configs/example.yaml.metadata",
+    "crc": 3299303064,
+    "size": 103
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/base/utils.py.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/base/utils.py.metadata",
+    "crc": 224467520,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/base/__init__.py.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/base/__init__.py.metadata",
+    "crc": 1544343717,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/iresnet/configs/v1_ir101.yaml.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/iresnet/configs/v1_ir101.yaml.metadata",
+    "crc": 2677565425,
+    "size": 103
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/iresnet/configs/v1_ir18.yaml.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/iresnet/configs/v1_ir18.yaml.metadata",
+    "crc": 2100024090,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/iresnet/configs/v1_ir50.yaml.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/iresnet/configs/v1_ir50.yaml.metadata",
+    "crc": 1025603911,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/iresnet/model.py.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/iresnet/model.py.metadata",
+    "crc": 460691465,
+    "size": 103
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/iresnet/__init__.py.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/iresnet/__init__.py.metadata",
+    "crc": 933755361,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/models/__init__.py.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/models/__init__.py.metadata",
+    "crc": 3847239254,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/pretrained_model/config.yaml.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/pretrained_model/config.yaml.metadata",
+    "crc": 292009175,
+    "size": 103
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/pretrained_model/model.pt.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/pretrained_model/model.pt.metadata",
+    "crc": 4218673662,
+    "size": 128
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/pretrained_model/model.yaml.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/pretrained_model/model.yaml.metadata",
+    "crc": 1820567138,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/README.md.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/README.md.metadata",
+    "crc": 3459772155,
+    "size": 104
+  },
+  "adaface_source/adaface_model/.cache/huggingface/download/wrapper.py.metadata": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/.cache/huggingface/download/wrapper.py.metadata",
+    "crc": 1537815921,
+    "size": 103
+  },
+  "adaface_source/adaface_model/config.json": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/config.json",
+    "crc": 3705449563,
+    "size": 479
+  },
+  "adaface_source/adaface_model/files.txt": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/files.txt",
+    "crc": 2764914248,
+    "size": 350
+  },
+  "adaface_source/adaface_model/model.safetensors": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/model.safetensors",
+    "crc": 2205605433,
+    "size": 260980552
+  },
+  "adaface_source/adaface_model/models/base/configs/example.yaml": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/configs/example.yaml",
+    "crc": 884951514,
+    "size": 98
+  },
+  "adaface_source/adaface_model/models/base/utils.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/utils.py",
+    "crc": 1593413168,
+    "size": 3122
+  },
+  "adaface_source/adaface_model/models/base/__init__.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__init__.py",
+    "crc": 3980396031,
+    "size": 5390
+  },
+  "adaface_source/adaface_model/models/base/__pycache__/utils.cpython-310.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__pycache__/utils.cpython-310.pyc",
+    "crc": 342866818,
+    "size": 3619
+  },
+  "adaface_source/adaface_model/models/base/__pycache__/utils.cpython-311.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__pycache__/utils.cpython-311.pyc",
+    "crc": 2380784384,
+    "size": 6505
+  },
+  "adaface_source/adaface_model/models/base/__pycache__/utils.cpython-312.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__pycache__/utils.cpython-312.pyc",
+    "crc": 1733477150,
+    "size": 5736
+  },
+  "adaface_source/adaface_model/models/base/__pycache__/__init__.cpython-310.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__pycache__/__init__.cpython-310.pyc",
+    "crc": 376582893,
+    "size": 6596
+  },
+  "adaface_source/adaface_model/models/base/__pycache__/__init__.cpython-311.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__pycache__/__init__.cpython-311.pyc",
+    "crc": 4051764773,
+    "size": 9104
+  },
+  "adaface_source/adaface_model/models/base/__pycache__/__init__.cpython-312.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/base/__pycache__/__init__.cpython-312.pyc",
+    "crc": 1851805412,
+    "size": 8204
+  },
+  "adaface_source/adaface_model/models/iresnet/configs/v1_ir101.yaml": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/configs/v1_ir101.yaml",
+    "crc": 2189535788,
+    "size": 103
+  },
+  "adaface_source/adaface_model/models/iresnet/configs/v1_ir18.yaml": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/configs/v1_ir18.yaml",
+    "crc": 3346065827,
+    "size": 102
+  },
+  "adaface_source/adaface_model/models/iresnet/configs/v1_ir50.yaml": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/configs/v1_ir50.yaml",
+    "crc": 3432844665,
+    "size": 102
+  },
+  "adaface_source/adaface_model/models/iresnet/model.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/model.py",
+    "crc": 3252659819,
+    "size": 10912
+  },
+  "adaface_source/adaface_model/models/iresnet/__init__.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__init__.py",
+    "crc": 3337494498,
+    "size": 1794
+  },
+  "adaface_source/adaface_model/models/iresnet/__pycache__/model.cpython-310.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__pycache__/model.cpython-310.pyc",
+    "crc": 1756907700,
+    "size": 9281
+  },
+  "adaface_source/adaface_model/models/iresnet/__pycache__/model.cpython-311.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__pycache__/model.cpython-311.pyc",
+    "crc": 2444216673,
+    "size": 18311
+  },
+  "adaface_source/adaface_model/models/iresnet/__pycache__/model.cpython-312.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__pycache__/model.cpython-312.pyc",
+    "crc": 1827327123,
+    "size": 15115
+  },
+  "adaface_source/adaface_model/models/iresnet/__pycache__/__init__.cpython-310.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__pycache__/__init__.cpython-310.pyc",
+    "crc": 2585173110,
+    "size": 2231
+  },
+  "adaface_source/adaface_model/models/iresnet/__pycache__/__init__.cpython-311.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__pycache__/__init__.cpython-311.pyc",
+    "crc": 2838153445,
+    "size": 3380
+  },
+  "adaface_source/adaface_model/models/iresnet/__pycache__/__init__.cpython-312.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/iresnet/__pycache__/__init__.cpython-312.pyc",
+    "crc": 1435305924,
+    "size": 3098
+  },
+  "adaface_source/adaface_model/models/__init__.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/__init__.py",
+    "crc": 1503214349,
+    "size": 2002
+  },
+  "adaface_source/adaface_model/models/__pycache__/__init__.cpython-310.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/__pycache__/__init__.cpython-310.pyc",
+    "crc": 2254107442,
+    "size": 1504
+  },
+  "adaface_source/adaface_model/models/__pycache__/__init__.cpython-311.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/__pycache__/__init__.cpython-311.pyc",
+    "crc": 3637807162,
+    "size": 2570
+  },
+  "adaface_source/adaface_model/models/__pycache__/__init__.cpython-312.pyc": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/models/__pycache__/__init__.cpython-312.pyc",
+    "crc": 251602437,
+    "size": 2303
+  },
+  "adaface_source/adaface_model/pretrained_model/config.yaml": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/pretrained_model/config.yaml",
+    "crc": 3796933161,
+    "size": 54
+  },
+  "adaface_source/adaface_model/pretrained_model/model.pt": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/pretrained_model/model.pt",
+    "crc": 3290178059,
+    "size": 261111273
+  },
+  "adaface_source/adaface_model/pretrained_model/model.yaml": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/pretrained_model/model.yaml",
+    "crc": 1647181529,
+    "size": 150
+  },
+  "adaface_source/adaface_model/README.md": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/README.md",
+    "crc": 3714613443,
+    "size": 2780
+  },
+  "adaface_source/adaface_model/wrapper.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/adaface_model/wrapper.py",
+    "crc": 31595909,
+    "size": 766
+  },
+  "adaface_source/data/attendance.db": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/data/attendance.db",
+    "crc": 4081735903,
+    "size": 16384
+  },
+  "adaface_source/data/enrollment_report.json": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/data/enrollment_report.json",
+    "crc": 2768165558,
+    "size": 2886
+  },
+  "adaface_source/data/students.faiss": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/data/students.faiss",
+    "crc": 3156715124,
+    "size": 409645
+  },
+  "adaface_source/data/students.json": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/data/students.json",
+    "crc": 2052538804,
+    "size": 37100
+  },
+  "adaface_source/data/student_embeddings.pkl": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/data/student_embeddings.pkl",
+    "crc": 45417564,
+    "size": 111196
+  },
+  "adaface_source/data/video_student_embeddings.pkl": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/data/video_student_embeddings.pkl",
+    "crc": 3677537620,
+    "size": 2213
+  },
+  "adaface_source/main.py": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/main.py",
+    "crc": 498989072,
+    "size": 39674
+  },
+  "adaface_source/requirements.txt": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/requirements.txt",
+    "crc": 1133137386,
+    "size": 122
+  },
+  "adaface_source/testing.mp4": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/testing.mp4",
+    "crc": 1644902791,
+    "size": 281555262
+  },
+  "adaface_source/yolov8m-face.pt": {
+    "zip": "face-recognition-adaface-main.zip",
+    "entry": "face-recognition-adaface-main/yolov8m-face.pt",
+    "crc": 4284840496,
+    "size": 52028566
+  }
+}

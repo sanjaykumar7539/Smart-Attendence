@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Student Attendance — EGS Pillay Engineering College</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white:    #FFFFFF;
+  --off:      #F7F8FA;
+  --off2:     #EEF0F4;
+  --border:   #DDE1E9;
+  --text:     #0F1623;
+  --sub:      #6B7280;
+  --muted:    #9CA3AF;
+  /* EGSPEC brand — sampled from egspec.org screenshot 2026-07-23 */
+  --maroon:   #001B70;              /* navy — primary (was maroon placeholder) */
+  --maroon2:  #000F42;              /* darker navy for gradients/hover */
+  --maroon-l: rgba(0,27,112,0.08);  /* light navy tint */
+  --gold:     #AF005F;              /* magenta — secondary/accent (was gold placeholder) */
+  --gold-l:   #FDF0F6;              /* light magenta tint */
+  --yellow:   #FFCC00;              /* EGSPEC's real CTA/badge yellow (TNEA code, admission-open) */
+  --yellow-l: #FFFBEB;
+  --green:    #0E7A4A;
+  --green-l:  #E8F5EE;
+  --red:      #C0392B;
+  --red-l:    #FDF0EF;
+  --blue:     #1A56A6;
+  --blue-l:   #EEF3FB;
+  --orange:   #D4600A;
+  --orange-l: #FEF0E6;
+  --purple:   #7C3AED;
+  --purple-l: #F5F3FF;
+  --shadow:   0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+  --shadow-md:0 2px 8px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+body {
+  background: var(--off);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  min-height: 100vh;
+}
+
+/* ── College Banner ─────────────────── */
+.college-banner {
+  background: var(--maroon);
+  color: white;
+  display: flex; align-items: center; gap: 16px;
+  padding: 10px 28px;
+  border-bottom: 3px solid var(--gold);
+}
+.college-logo {
+  width: 56px; height: 56px; background: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(201,146,42,0.5);
+  overflow: hidden;
+}
+.college-logo svg { width: 46px; height: 46px; }
+.college-name {
+  font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 800; line-height: 1.2;
+}
+.college-tagline { font-size: 10px; color: rgba(255,255,255,0.7); letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
+.banner-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.accred-badge {
+  display: flex; flex-direction: column; align-items: center;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px; padding: 5px 14px; font-size: 9px; letter-spacing: 1px;
+  text-transform: uppercase; gap: 1px; color: rgba(255,255,255,0.85);
+}
+.accred-badge strong { font-size: 14px; font-weight: 800; color: var(--gold); font-family: 'Playfair Display', serif; letter-spacing: 0; }
+.banner-system { text-align: right; }
+.banner-system-title { font-size: 11px; opacity: 0.85; font-weight: 600; }
+.banner-system-sub { font-size: 10px; opacity: 0.5; margin-top: 2px; }
+
+/* ── Sticky Header ─────────────────── */
+header {
+  background: white; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; height: 52px;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.header-left { display: flex; align-items: center; gap: 10px; }
+.brand { font-size: 13px; font-weight: 700; color: var(--maroon); display: flex; align-items: center; gap: 8px; }
+.live-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 0 3px rgba(14,122,74,0.15);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 3px rgba(14,122,74,0.15)} 50%{box-shadow:0 0 0 6px rgba(14,122,74,0.06)} }
+.div-v { width:1px; height:20px; background:var(--border); margin:0 10px; }
+.nav-tabs { display:flex; gap:2px; background:var(--off); border-radius:8px; padding:3px; border:1px solid var(--border); }
+.nav-tab {
+  padding:5px 16px; border-radius:6px; font-size:12px; font-weight:500;
+  color:var(--muted); border:none; background:transparent; cursor:pointer; transition:all 0.15s;
+}
+.nav-tab.active { background:var(--maroon); color:white; }
+.nav-tab:hover:not(.active) { color:var(--text); background:var(--off2); }
+
+.header-right { display:flex; align-items:center; gap:10px; }
+.live-pill {
+  display:flex; align-items:center; gap:6px; padding:5px 12px; border-radius:20px;
+  background:var(--green-l); border:1px solid rgba(14,122,74,0.2);
+  font-size:11px; font-weight:600; color:var(--green);
+}
+.hr-btn {
+  padding:6px 14px; border-radius:6px; border:1px solid rgba(201,146,42,0.35);
+  background:var(--gold-l); color:var(--gold); font-size:12px; font-weight:600;
+  cursor:pointer; transition:all 0.15s;
+}
+.hr-btn:hover { background:rgba(201,146,42,0.15); }
+#clock {
+  font-family:'DM Mono',monospace; font-size:13px; font-weight:500;
+  background:var(--off); border:1px solid var(--border); padding:5px 12px; border-radius:6px;
+}
+
+/* ── Main ──────────────────────────── */
+main { padding:20px 28px; display:flex; flex-direction:column; gap:16px; }
+.view { display:none; flex-direction:column; gap:16px; animation:fadeIn 0.25s ease; }
+.view.active { display:flex; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── Stat Cards ────────────────────── */
+.stats-row { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; }
+.stat-card {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  padding:16px; position:relative; overflow:hidden;
+  box-shadow:var(--shadow); transition:all 0.2s;
+}
+.stat-card:hover { box-shadow:var(--shadow-md); transform:translateY(-1px); }
+.stat-card::after {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px; border-radius:12px 12px 0 0;
+}
+.sc-total::after   { background:var(--blue); }
+.sc-present::after { background:var(--green); }
+.sc-absent::after  { background:var(--red); }
+.sc-perm::after    { background:var(--orange); }
+.sc-leave::after   { background:var(--purple); }
+.sc-fps::after     { background:var(--maroon); }
+.stat-label { font-size:10px; text-transform:uppercase; letter-spacing:0.8px; color:var(--muted); font-weight:600; margin-bottom:6px; }
+.stat-val   { font-family:'Playfair Display',serif; font-size:30px; font-weight:800; line-height:1; color:var(--text); }
+.stat-sub   { font-size:10px; color:var(--muted); margin-top:4px; }
+.stat-icon  { position:absolute; right:14px; top:14px; font-size:20px; opacity:0.1; }
+
+/* ── Main Grid ─────────────────────── */
+.main-grid { display:grid; grid-template-columns:1fr 360px; gap:16px; flex:1; }
+
+/* ── Camera ────────────────────────── */
+.camera-panel {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; display:flex; flex-direction:column; box-shadow:var(--shadow);
+}
+.panel-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:11px 16px; border-bottom:1px solid var(--border);
+}
+.panel-title {
+  font-size:12px; font-weight:700; color:var(--text);
+  display:flex; align-items:center; gap:8px; text-transform:uppercase; letter-spacing:0.5px;
+}
+.cam-dot { width:7px; height:7px; border-radius:50%; background:var(--red); animation:blink 1.5s steps(1) infinite; }
+@keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0.3} }
+#camera-feed { width:100%; aspect-ratio:16/10; object-fit:cover; display:block; background:#080808; }
+.camera-footer {
+  padding:8px 14px; background:var(--off); border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.fps-label { font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); }
+
+/* ── Right Column ──────────────────── */
+.right-col { display:flex; flex-direction:column; gap:12px; }
+
+/* ── Events Panel ──────────────────── */
+.events-panel {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; box-shadow:var(--shadow); flex:1; display:flex; flex-direction:column; min-height:0;
+}
+#events-list {
+  flex:1; overflow-y:auto; padding:6px;
+  display:flex; flex-direction:column; gap:3px; max-height:280px;
+}
+#events-list::-webkit-scrollbar { width:4px; }
+#events-list::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+.event-item {
+  display:flex; align-items:center; gap:10px;
+  padding:9px 11px; border-radius:8px; border:1px solid transparent;
+  transition:all 0.15s; cursor:default; animation:slideIn 0.25s ease;
+}
+@keyframes slideIn { from{opacity:0;transform:translateX(-6px)} to{opacity:1} }
+.event-item:hover { background:var(--off); border-color:var(--border); }
+.event-dir {
+  width:28px; height:28px; border-radius:7px;
+  display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0;
+}
+.event-dir.in  { background:var(--green-l); color:var(--green); }
+.event-dir.out { background:var(--red-l);   color:var(--red);   }
+.event-info { flex:1; min-width:0; }
+.event-name { font-weight:600; color:var(--text); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.event-meta { font-size:10px; color:var(--muted); margin-top:1px; font-family:'DM Mono',monospace; }
+
+/* ── Status Pills ──────────────────── */
+.status-pill {
+  display:inline-flex; align-items:center; gap:4px;
+  padding:2px 8px; border-radius:20px; font-size:11px; font-weight:700;
+  font-family:'DM Mono',monospace; white-space:nowrap;
+}
+.s-present { background:var(--green-l);  color:var(--green);  }
+.s-absent  { background:var(--red-l);    color:var(--red);    }
+.s-perm    { background:var(--orange-l); color:var(--orange); }
+.s-leave   { background:var(--gold-l);   color:var(--gold);   }
+.s-halfday { background:var(--blue-l);   color:var(--blue);   }
+.s-logged  { background:var(--off2);     color:var(--muted);  }
+
+/* ── Donut / College events ────────── */
+.donut-wrap { display:flex; align-items:center; gap:20px; padding:14px 16px; }
+.donut-legend { display:flex; flex-direction:column; gap:8px; }
+.legend-item { display:flex; align-items:center; gap:8px; font-size:11px; color:var(--sub); }
+.legend-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+
+.college-event-item {
+  padding:8px 14px; border-left:3px solid var(--gold);
+  margin:3px 8px; border-radius:0 6px 6px 0;
+  background:var(--gold-l); transition:background 0.15s; cursor:default;
+}
+.college-event-item:hover { background:rgba(201,146,42,0.1); }
+.college-event-title { font-size:12px; font-weight:600; color:var(--text); }
+.college-event-date  { font-size:10px; color:var(--muted); font-family:'DM Mono',monospace; margin-top:2px; }
+
+/* ── Presence Grid ─────────────────── */
+.presence-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.presence-section {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; box-shadow:var(--shadow);
+}
+.presence-header {
+  padding:11px 16px; display:flex; align-items:center; justify-content:space-between;
+  border-bottom:2px solid;
+}
+.presence-header.green { background:var(--green-l); border-color:var(--green); }
+.presence-header.red   { background:var(--red-l);   border-color:var(--red);   }
+.presence-count { font-family:'Playfair Display',serif; font-size:26px; font-weight:800; }
+.presence-count.green { color:var(--green); }
+.presence-count.red   { color:var(--red);   }
+.presence-list {
+  padding:6px; display:flex; flex-direction:column; gap:2px;
+  max-height:300px; overflow-y:auto;
+}
+.presence-list::-webkit-scrollbar { width:3px; }
+.presence-list::-webkit-scrollbar-thumb { background:var(--border); }
+.person-row {
+  display:flex; align-items:center; gap:9px;
+  padding:7px 10px; border-radius:7px; transition:background 0.12s;
+}
+.person-row:hover { background:var(--off); }
+.avatar {
+  width:30px; height:30px; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:800; flex-shrink:0; font-family:'Playfair Display',serif;
+}
+.avatar-present { background:var(--green-l); color:var(--green); border:1px solid rgba(14,122,74,0.2); }
+.avatar-absent  { background:var(--red-l);   color:var(--red);   border:1px solid rgba(192,57,43,0.2); }
+.avatar-perm    { background:var(--orange-l);color:var(--orange);border:1px solid rgba(212,96,10,0.2);  }
+.avatar-leave   { background:var(--gold-l);  color:var(--gold);  border:1px solid rgba(201,146,42,0.2); }
+.person-name { font-size:12px; font-weight:600; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.person-time { font-size:10px; color:var(--muted); font-family:'DM Mono',monospace; margin-top:1px; }
+
+/* ── Attendance View ───────────────── */
+.attendance-toolbar {
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  background:white; border:1px solid var(--border); border-radius:12px;
+  padding:14px 16px; box-shadow:var(--shadow);
+}
+.search-box {
+  flex:1; min-width:200px; max-width:300px;
+  background:var(--off); border:1px solid var(--border); border-radius:8px;
+  padding:7px 12px; color:var(--text); font-size:12px;
+  font-family:'DM Sans',sans-serif; outline:none; transition:border-color 0.2s;
+}
+.search-box:focus { border-color:var(--maroon); background:white; }
+.search-box::placeholder { color:var(--muted); }
+.filter-select {
+  background:var(--off); border:1px solid var(--border); border-radius:8px;
+  padding:7px 10px; color:var(--text); font-size:12px;
+  font-family:'DM Sans',sans-serif; outline:none; cursor:pointer; transition:border-color 0.2s;
+}
+.filter-select:focus { border-color:var(--maroon); }
+
+/* Buttons */
+.btn {
+  display:flex; align-items:center; gap:6px;
+  padding:7px 14px; border-radius:8px; border:none; cursor:pointer;
+  font-size:12px; font-weight:600; font-family:'DM Sans',sans-serif; transition:all 0.15s;
+}
+.btn-primary { background:var(--maroon); color:white; }
+.btn-primary:hover { background:var(--maroon2); }
+.btn-gold    { background:var(--gold-l);   color:var(--gold);   border:1px solid rgba(201,146,42,0.3); }
+.btn-gold:hover { background:rgba(201,146,42,0.15); }
+.btn-green   { background:var(--green-l);  color:var(--green);  border:1px solid rgba(14,122,74,0.25); }
+.btn-green:hover { background:rgba(14,122,74,0.12); }
+.btn-danger  { background:var(--red-l);    color:var(--red);    border:1px solid rgba(192,57,43,0.25); }
+.btn-danger:hover { background:rgba(192,57,43,0.12); }
+.btn-outline { background:white; color:var(--sub); border:1px solid var(--border); }
+.btn-outline:hover { border-color:var(--maroon); color:var(--maroon); }
+
+/* Table */
+.table-wrap {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; box-shadow:var(--shadow);
+}
+.att-table { width:100%; border-collapse:collapse; }
+.att-table th {
+  padding:10px 14px; text-align:left; font-size:10px; text-transform:uppercase;
+  letter-spacing:0.8px; color:var(--sub); border-bottom:1px solid var(--border);
+  font-weight:700; white-space:nowrap; background:var(--off);
+}
+.att-table td {
+  padding:10px 14px; border-bottom:1px solid var(--off2);
+  font-size:12px; color:var(--text); vertical-align:middle;
+}
+.att-table tr:last-child td { border-bottom:none; }
+.att-table tbody tr:hover { background:var(--off); }
+.emp-id { font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); }
+.emp-name { font-weight:600; }
+
+/* ── Audit ─────────────────────────── */
+.audit-panel {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  padding:18px; box-shadow:var(--shadow);
+}
+.audit-result { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:14px; }
+.audit-stat {
+  background:var(--off); border:1px solid var(--border); border-radius:8px;
+  padding:12px; text-align:center;
+}
+.audit-stat-val { font-family:'Playfair Display',serif; font-size:24px; font-weight:800; }
+.audit-stat-label { font-size:10px; color:var(--muted); margin-top:3px; text-transform:uppercase; letter-spacing:0.5px; }
+
+/* ── Downloads ─────────────────────── */
+.download-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.dl-card {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  padding:20px; display:flex; flex-direction:column; gap:12px;
+  box-shadow:var(--shadow); transition:all 0.2s;
+}
+.dl-card:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.dl-icon  { font-size:28px; }
+.dl-title { font-family:'Playfair Display',serif; font-size:15px; font-weight:800; color:var(--text); }
+.dl-desc  { font-size:11px; color:var(--sub); line-height:1.6; }
+.dl-fields { display:flex; flex-direction:column; gap:8px; }
+.form-group { margin-bottom:10px; }
+.form-label { font-size:10px; color:var(--muted); margin-bottom:5px; display:block; text-transform:uppercase; letter-spacing:0.5px; font-weight:600; }
+.form-input {
+  width:100%; background:var(--off); border:1px solid var(--border);
+  border-radius:8px; padding:8px 12px; color:var(--text); font-size:12px;
+  font-family:'DM Sans',sans-serif; outline:none; transition:border-color 0.2s;
+}
+.form-input:focus { border-color:var(--maroon); background:white; }
+
+/* ── HR ────────────────────────────── */
+.hr-locked {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:14px; padding:70px 40px;
+  background:white; border:1px solid var(--border); border-radius:16px;
+  box-shadow:var(--shadow); text-align:center;
+}
+.lock-icon  { font-size:52px; opacity:0.4; }
+.lock-title { font-family:'Playfair Display',serif; font-size:22px; font-weight:800; }
+.lock-sub   { font-size:12px; color:var(--sub); }
+.pin-input  { display:flex; gap:10px; margin-top:6px; }
+.pin-digit {
+  width:46px; height:52px; text-align:center; font-size:22px; font-weight:700;
+  background:var(--off); border:2px solid var(--border); border-radius:10px;
+  color:var(--text); outline:none; font-family:'DM Mono',monospace; transition:border-color 0.2s;
+}
+.pin-digit:focus { border-color:var(--maroon); }
+
+.hr-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 20px; background:white; border:1px solid var(--border);
+  border-radius:12px; border-left:4px solid var(--gold); box-shadow:var(--shadow);
+}
+.hr-title { font-family:'Playfair Display',serif; font-size:18px; font-weight:800; }
+.hr-sub   { font-size:12px; color:var(--sub); margin-top:2px; }
+.hr-grid  { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.hr-card  {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  padding:18px; box-shadow:var(--shadow);
+}
+.hr-card-title {
+  font-size:13px; font-weight:700; color:var(--maroon);
+  margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:8px;
+}
+.leave-table-wrap { overflow-x:auto; }
+.leave-table { width:100%; border-collapse:collapse; }
+.leave-table th {
+  padding:8px 12px; text-align:left; font-size:10px; text-transform:uppercase;
+  letter-spacing:0.8px; color:var(--muted); border-bottom:1px solid var(--border);
+  font-weight:700; background:var(--off);
+}
+.leave-table td { padding:9px 12px; border-bottom:1px solid var(--off2); font-size:11px; color:var(--text); }
+.leave-table tbody tr:hover td { background:var(--off); }
+
+.leave-bar-row  { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.leave-bar-label{ width:28px; font-size:11px; color:var(--sub); font-family:'DM Mono',monospace; }
+.leave-bar-track{ flex:1; height:6px; background:var(--off2); border-radius:3px; }
+.leave-bar-fill { height:100%; border-radius:3px; transition:width 0.8s ease; }
+.lb-cl { background:var(--blue); }
+.lb-ml { background:var(--orange); }
+.lb-el { background:var(--green); }
+.leave-bar-val  { font-family:'DM Mono',monospace; font-size:11px; color:var(--text); width:36px; text-align:right; }
+
+/* ── Toast ─────────────────────────── */
+#toast-container {
+  position:fixed; bottom:24px; right:24px; z-index:999;
+  display:flex; flex-direction:column; gap:8px;
+}
+.toast {
+  padding:11px 16px; border-radius:10px; font-size:12px; font-weight:500;
+  background:white; box-shadow:var(--shadow-md);
+  display:flex; align-items:center; gap:10px;
+  animation:tIn 0.3s ease, tOut 0.3s ease 3.7s forwards;
+  border-left:4px solid; max-width:320px; pointer-events:none;
+}
+.toast-attend { border-color:var(--maroon); }
+.toast-info   { border-color:var(--blue);   }
+.toast-warn   { border-color:var(--gold);   }
+.toast-error  { border-color:var(--red);    }
+@keyframes tIn  { from{opacity:0;transform:translateX(16px)} to{opacity:1;transform:translateX(0)} }
+@keyframes tOut { to{opacity:0;transform:translateX(16px)} }
+
+/* ── HLC Alert Panel ───────────────── */
+.hlc-panel {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; box-shadow:var(--shadow);
+}
+.hlc-header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:11px 16px; border-bottom:1px solid var(--border);
+  background:var(--red-l);
+}
+.hlc-title { font-size:12px; font-weight:700; color:var(--red); display:flex; align-items:center; gap:8px; text-transform:uppercase; letter-spacing:0.5px; }
+.hlc-badge {
+  background:var(--red); color:white; font-family:'DM Mono',monospace;
+  font-size:10px; font-weight:700; padding:2px 8px; border-radius:10px; min-width:20px; text-align:center;
+}
+.hlc-status-row {
+  display:flex; align-items:center; gap:8px; padding:8px 16px;
+  background:var(--off); border-bottom:1px solid var(--border); font-size:11px; color:var(--muted);
+}
+.hlc-engine-dot { width:7px; height:7px; border-radius:50%; background:var(--green); flex-shrink:0; }
+.hlc-engine-dot.off { background:var(--muted); }
+#hlc-alerts-list { max-height:320px; overflow-y:auto; padding:6px; display:flex; flex-direction:column; gap:4px; }
+#hlc-alerts-list::-webkit-scrollbar { width:4px; }
+#hlc-alerts-list::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+.hlc-alert-item {
+  display:flex; align-items:flex-start; gap:10px;
+  padding:10px 12px; border-radius:8px; border:1px solid var(--red-l);
+  background:var(--red-l); animation:slideIn 0.3s ease;
+}
+.hlc-alert-item.resolved { opacity:0.5; background:var(--off); border-color:var(--border); }
+.hlc-alert-icon { font-size:18px; flex-shrink:0; margin-top:1px; }
+.hlc-alert-body { flex:1; min-width:0; }
+.hlc-alert-name { font-weight:700; font-size:12px; color:var(--red); }
+.hlc-alert-meta { font-size:10px; color:var(--muted); font-family:'DM Mono',monospace; margin-top:2px; line-height:1.6; }
+.hlc-alert-time { font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); white-space:nowrap; flex-shrink:0; }
+.hlc-empty { text-align:center; padding:28px; color:var(--muted); font-size:12px; }
+
+/* ── Misc ──────────────────────────── */
+.no-data    { text-align:center; padding:28px; color:var(--muted); font-size:12px; }
+.spinner    { display:inline-block; width:14px; height:14px; border:2px solid var(--border); border-top-color:var(--maroon); border-radius:50%; animation:spin 0.7s linear infinite; }
+@keyframes spin { to{transform:rotate(360deg)} }
+.section-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:800; }
+.section-sub   { font-size:12px; color:var(--sub); margin-top:2px; }
+
+/* ── AI Chat ───────────────────────── */
+.ai-wrap {
+  display:grid; grid-template-columns:1fr 300px; gap:16px; height:calc(100vh - 200px); min-height:500px;
+}
+.chat-panel {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  display:flex; flex-direction:column; overflow:hidden; box-shadow:var(--shadow);
+}
+.chat-header {
+  padding:14px 18px; border-bottom:1px solid var(--border);
+  background:var(--maroon); color:white;
+  display:flex; align-items:center; justify-content:space-between;
+  border-radius:12px 12px 0 0;
+}
+.chat-header-title { font-family:'Playfair Display',serif; font-size:15px; font-weight:800; display:flex; align-items:center; gap:10px; }
+.chat-header-sub { font-size:10px; opacity:0.7; margin-top:2px; }
+.ai-status-dot { width:8px; height:8px; border-radius:50%; background:#4ade80; animation:pulse 2s infinite; flex-shrink:0; }
+
+.chat-messages {
+  flex:1; overflow-y:auto; padding:16px;
+  display:flex; flex-direction:column; gap:12px;
+  background:var(--off);
+}
+.chat-messages::-webkit-scrollbar { width:4px; }
+.chat-messages::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+
+.msg { display:flex; gap:10px; animation:slideIn 0.25s ease; max-width:85%; }
+.msg.user { align-self:flex-end; flex-direction:row-reverse; }
+.msg.bot  { align-self:flex-start; }
+
+.msg-avatar {
+  width:32px; height:32px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; flex-shrink:0; align-self:flex-end;
+}
+.msg.bot  .msg-avatar { background:var(--maroon); color:white; }
+.msg.user .msg-avatar { background:var(--off2); color:var(--sub); border:1px solid var(--border); }
+
+.msg-bubble {
+  padding:10px 14px; border-radius:12px; font-size:12px; line-height:1.6;
+  max-width:100%;
+}
+.msg.bot  .msg-bubble {
+  background:white; border:1px solid var(--border); border-bottom-left-radius:4px;
+  color:var(--text); box-shadow:var(--shadow);
+}
+.msg.user .msg-bubble {
+  background:var(--maroon); color:white; border-bottom-right-radius:4px;
+}
+.msg-time { font-size:9px; color:var(--muted); margin-top:4px; text-align:right; font-family:'DM Mono',monospace; }
+
+.chat-input-area {
+  padding:12px 14px; border-top:1px solid var(--border); background:white;
+  display:flex; gap:8px; align-items:flex-end;
+}
+.chat-input {
+  flex:1; background:var(--off); border:1px solid var(--border); border-radius:10px;
+  padding:9px 14px; font-size:13px; font-family:'DM Sans',sans-serif;
+  color:var(--text); outline:none; resize:none; max-height:100px;
+  transition:border-color 0.2s; line-height:1.5;
+}
+.chat-input:focus { border-color:var(--maroon); background:white; }
+.chat-input::placeholder { color:var(--muted); }
+.send-btn {
+  width:40px; height:40px; border-radius:10px; border:none;
+  background:var(--maroon); color:white; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; transition:all 0.15s; flex-shrink:0;
+}
+.send-btn:hover { background:var(--maroon2); transform:scale(1.05); }
+.send-btn:disabled { opacity:0.5; cursor:not-allowed; transform:none; }
+
+/* Typing indicator */
+.typing-indicator { display:flex; gap:4px; align-items:center; padding:4px 0; }
+.typing-dot {
+  width:6px; height:6px; border-radius:50%; background:var(--muted);
+  animation:typingBounce 1.2s ease infinite;
+}
+.typing-dot:nth-child(2) { animation-delay:0.2s; }
+.typing-dot:nth-child(3) { animation-delay:0.4s; }
+@keyframes typingBounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
+
+/* Suggestions panel */
+.suggestions-panel {
+  background:white; border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;
+}
+.suggestions-header {
+  padding:12px 16px; border-bottom:1px solid var(--border);
+  font-size:11px; font-weight:700; text-transform:uppercase;
+  letter-spacing:0.8px; color:var(--sub); background:var(--off);
+}
+.suggestions-list { padding:8px; display:flex; flex-direction:column; gap:4px; overflow-y:auto; flex:1; }
+.suggestion-chip {
+  padding:9px 12px; border-radius:8px; font-size:12px;
+  border:1px solid var(--border); background:white; cursor:pointer;
+  color:var(--text); text-align:left; transition:all 0.15s;
+  font-family:'DM Sans',sans-serif; line-height:1.4;
+}
+.suggestion-chip:hover { background:var(--maroon-l); border-color:rgba(123,28,44,0.25); color:var(--maroon); }
+
+.ai-date-bar {
+  display:flex; align-items:center; gap:10px;
+  padding:10px 16px; border-bottom:1px solid var(--border); background:var(--off);
+}
+.ai-date-label { font-size:11px; color:var(--sub); font-weight:600; }
+
+@media(max-width:1100px){
+  .stats-row         { grid-template-columns:repeat(3,1fr); }
+  .main-grid         { grid-template-columns:1fr; }
+  .hr-grid           { grid-template-columns:1fr; }
+  .download-grid     { grid-template-columns:1fr 1fr; }
+  .presence-grid     { grid-template-columns:1fr; }
+  .audit-result      { grid-template-columns:repeat(3,1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ── College Banner ───────────────────────── -->
+<div class="college-banner">
+  <div class="college-logo">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 5 L90 22 L90 60 Q90 82 50 96 Q10 82 10 60 L10 22 Z" fill="#001B70"/>
+      <path d="M50 10 L85 25 L85 60 Q85 78 50 91 Q15 78 15 60 L15 25 Z" fill="none" stroke="#AF005F" stroke-width="3"/>
+      <rect x="30" y="36" width="40" height="27" rx="2" fill="white" opacity="0.96"/>
+      <line x1="50" y1="36" x2="50" y2="63" stroke="#001B70" stroke-width="2"/>
+      <line x1="33" y1="43" x2="47" y2="43" stroke="#001B70" stroke-width="1.5"/>
+      <line x1="33" y1="48" x2="47" y2="48" stroke="#001B70" stroke-width="1.5"/>
+      <line x1="33" y1="53" x2="47" y2="53" stroke="#001B70" stroke-width="1.5"/>
+      <line x1="53" y1="43" x2="67" y2="43" stroke="#001B70" stroke-width="1.5"/>
+      <line x1="53" y1="48" x2="67" y2="48" stroke="#001B70" stroke-width="1.5"/>
+      <line x1="53" y1="53" x2="67" y2="53" stroke="#001B70" stroke-width="1.5"/>
+      <ellipse cx="50" cy="27" rx="5" ry="7" fill="#FFCC00"/>
+      <ellipse cx="50" cy="30" rx="3" ry="4" fill="#FFD700"/>
+    </svg>
+  </div>
+  <div>
+    <div class="college-name">EGS Pillay Engineering College</div>
+    <div class="college-tagline">Nagapattinam, Tamil Nadu · Autonomous · Affiliated to Anna University</div>
+  </div>
+  <div class="banner-right">
+    <div class="accred-badge"><strong>NAAC</strong>A++ Grade</div>
+    <div class="accred-badge"><strong>NBA</strong>Accredited</div>
+    <div class="banner-system">
+      <div class="banner-system-title">Smart Student Attendance System</div>
+      <div class="banner-system-sub">Student Recognition • Entry/Exit • Attendance & Status — Dept. of AI &amp; Data Science</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Header ───────────────────────────────── -->
+<header>
+  <div class="header-left">
+    <div class="brand"><div class="live-dot"></div>FaceTrack Pro</div>
+    <div class="div-v"></div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="switchView('live')">⬤ Live</button>
+      <button class="nav-tab" onclick="switchView('attendance')">Attendance</button>
+      <button class="nav-tab" onclick="switchView('hlc')">⚑ HLC Alerts</button>
+      <button class="nav-tab" onclick="switchView('download')">Downloads</button>
+      <button class="nav-tab" onclick="switchView('ai')">🤖 AI Chat</button>
+    </div>
+  </div>
+  <div class="header-right">
+    <button class="hr-btn" onclick="switchView('hr')">🔐 HR Access</button>
+    <div class="live-pill"><div class="live-dot"></div><span id="live-status">Connecting…</span></div>
+    <div id="clock">--:--:--</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ══ LIVE VIEW ════════════════════════════════ -->
+<div class="view active" id="view-live">
+
+  <div class="stats-row">
+    <div class="stat-card sc-total">
+      <div class="stat-label">Total Students</div>
+      <div class="stat-val" id="s-total">—</div>
+      <div class="stat-sub">enrolled</div>
+      <div class="stat-icon">👥</div>
+    </div>
+    <div class="stat-card sc-present">
+      <div class="stat-label">Present</div>
+      <div class="stat-val" id="s-present" style="color:var(--green)">—</div>
+      <div class="stat-sub" id="s-present-pct">—%</div>
+      <div class="stat-icon">✅</div>
+    </div>
+    <div class="stat-card sc-absent">
+      <div class="stat-label">Present</div>
+      <div class="stat-val" id="s-absent" style="color:var(--red)">—</div>
+      <div class="stat-sub" id="s-absent-pct">—%</div>
+      <div class="stat-icon">❌</div>
+    </div>
+    <div class="stat-card sc-perm">
+      <div class="stat-label">Permission</div>
+      <div class="stat-val" id="s-perm" style="color:var(--orange)">—</div>
+      <div class="stat-sub">late / early</div>
+      <div class="stat-icon">⏱</div>
+    </div>
+    <div class="stat-card sc-leave">
+      <div class="stat-label">On Leave</div>
+      <div class="stat-val" id="s-leave" style="color:var(--purple)">—</div>
+      <div class="stat-sub">CL / ML / EL</div>
+      <div class="stat-icon">📅</div>
+    </div>
+    <div class="stat-card sc-fps">
+      <div class="stat-label">Camera FPS</div>
+      <div class="stat-val" id="s-fps" style="color:var(--maroon)">—</div>
+      <div class="stat-sub" id="s-date">—</div>
+      <div class="stat-icon">📷</div>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <!-- Left: camera + presence -->
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="camera-panel">
+        <div class="panel-header">
+          <div class="panel-title"><div class="cam-dot"></div>Staff Entrance · CAM-01</div>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted)" id="cam-location">192.168.0.100</span>
+        </div>
+        <img id="camera-feed" src="/stream" alt="Live Feed">
+        <div class="camera-footer">
+          <span class="fps-label" id="fps-display">FPS: —</span>
+          <span class="fps-label" id="cam-status">● Camera active</span>
+        </div>
+      </div>
+
+      <div class="presence-grid">
+        <div class="presence-section">
+          <div class="presence-header green">
+            <div class="panel-title" style="color:var(--green)">✓ Present Today</div>
+            <div class="presence-count green" id="pc-present">—</div>
+          </div>
+          <div class="presence-list" id="present-list"><div class="no-data">Loading…</div></div>
+        </div>
+        <div class="presence-section">
+          <div class="presence-header red">
+            <div class="panel-title" style="color:var(--red)">✗ Absent / Not Yet</div>
+            <div class="presence-count red" id="pc-absent">—</div>
+          </div>
+          <div class="presence-list" id="absent-list"><div class="no-data">Loading…</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div class="right-col">
+      <div class="events-panel">
+        <div class="panel-header">
+          <div class="panel-title">⚡ Live Events</div>
+          <button class="btn btn-outline" style="padding:4px 10px;font-size:11px" onclick="clearEvents()">Clear</button>
+        </div>
+        <div id="events-list"><div class="no-data">Waiting for detections…</div></div>
+      </div>
+
+      <div class="events-panel">
+        <div class="panel-header">
+          <div class="panel-title" style="color:var(--gold)">📊 Today's Summary</div>
+        </div>
+        <div class="donut-wrap" style="padding:14px 16px;">
+          <svg id="donut-svg" width="80" height="80" viewBox="0 0 80 80"></svg>
+          <div class="donut-legend" id="donut-legend"></div>
+        </div>
+      </div>
+
+      <div class="events-panel">
+        <div class="panel-header">
+          <div class="panel-title" style="color:var(--gold)">🎓 College Events</div>
+          <a href="https://www.egspec.org" target="_blank" style="font-size:10px;color:var(--muted);text-decoration:none;">egspec.org ↗</a>
+        </div>
+        <div id="college-events-list" style="padding:6px 0 8px;">
+          <div class="no-data"><span class="spinner"></span></div>
+        </div>
+      </div>
+
+      <!-- Unauthorized Visitor Overstay Alerts (Live) -->
+      <div class="hlc-panel">
+        <div class="hlc-header">
+          <div class="hlc-title">⚑ Unauthorized Overstay Alerts <span class="hlc-badge" id="hlc-live-count">0</span></div>
+          <button class="btn btn-outline" style="padding:3px 10px;font-size:10px;border-color:var(--red);color:var(--red);" onclick="hlcForceCheck()">Force Check</button>
+        </div>
+        <div class="hlc-status-row">
+          <div class="hlc-engine-dot" id="hlc-engine-dot"></div>
+          <span id="hlc-engine-label">Checking engine status…</span>
+          <span style="margin-left:auto;font-family:'DM Mono',monospace" id="hlc-threshold-label"></span>
+        </div>
+        <div id="hlc-alerts-list"><div class="hlc-empty">No overstay alerts today ✓</div></div>
+      </div>
+    </div>
+  </div>
+</div><!-- end live -->
+
+
+<!-- ══ ATTENDANCE VIEW ══════════════════════════ -->
+<div class="view" id="view-attendance">
+  <div class="attendance-toolbar">
+    <input type="text" class="search-box" id="att-search" placeholder="🔍  Search by name or ID…" oninput="filterTable()">
+    <select class="filter-select" id="att-status-filter" onchange="filterTable()">
+      <option value="">All Statuses</option>
+      <option value="PRESENT">Present</option>
+      <option value="ABSENT">Absent</option>
+      <option value="PERMISSION">Permission</option>
+      <option value="HALF_DAY">Half Day</option>
+      <option value="CL">CL</option><option value="ML">ML</option><option value="EL">EL</option>
+    </select>
+    <input type="date" class="filter-select" id="att-date" onchange="loadAttendance()">
+    <button class="btn btn-primary" onclick="loadAttendance()">↻ Refresh</button>
+    <button class="btn btn-gold" onclick="runAudit()">🔍 Run Audit</button>
+    <div style="flex:1"></div>
+    <button class="btn btn-green" onclick="quickExport()">⬇ Export CSV</button>
+  </div>
+
+  <div id="audit-strip" style="display:none;" class="audit-panel">
+    <div style="display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px;">
+      <span>🔍 Audit Report</span>
+      <span id="audit-date-label" style="font-size:12px;color:var(--sub);font-family:'DM Mono',monospace;font-weight:400;"></span>
+      <span class="spinner" id="audit-spinner" style="display:none;"></span>
+    </div>
+    <div class="audit-result" id="audit-result-grid"></div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="att-table">
+      <thead><tr>
+        <th>ID</th><th>Name</th><th>Morning</th><th>Evening</th>
+        <th>Final Status</th><th>First In</th><th>Last Out</th><th>Notes</th>
+      </tr></thead>
+      <tbody id="att-tbody"><tr><td colspan="8" class="no-data">Loading…</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ══ DOWNLOAD VIEW ════════════════════════════ -->
+<div class="view" id="view-download">
+  <div>
+    <div class="section-title">Downloads &amp; Exports</div>
+    <div class="section-sub">Export attendance data in CSV format for payroll, HR systems, or analysis.</div>
+  </div>
+  <div class="download-grid">
+    <div class="dl-card">
+      <div class="dl-icon">📋</div>
+      <div class="dl-title">Daily Attendance</div>
+      <div class="dl-desc">Export a single day's attendance records with all status fields, timestamps, and notes.</div>
+      <div class="dl-fields">
+        <div class="form-group" style="margin:0"><label class="form-label">Date</label><input type="date" class="form-input" id="dl-daily-date"></div>
+      </div>
+      <button class="btn btn-primary" onclick="downloadDaily()" style="width:100%;justify-content:center;">⬇ Download CSV</button>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon">📊</div>
+      <div class="dl-title">Date Range Report</div>
+      <div class="dl-desc">Export attendance records across a custom date range. Includes daily breakdown per student.</div>
+      <div class="dl-fields">
+        <div class="form-group" style="margin:0"><label class="form-label">From</label><input type="date" class="form-input" id="dl-from"></div>
+        <div class="form-group" style="margin:0"><label class="form-label">To</label><input type="date" class="form-input" id="dl-to"></div>
+      </div>
+      <button class="btn btn-primary" onclick="downloadRange()" style="width:100%;justify-content:center;">⬇ Download CSV</button>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon">📅</div>
+      <div class="dl-title">Monthly Summary</div>
+      <div class="dl-desc">Complete monthly attendance matrix — each student as a row, each day as a column. Ready for academic records.</div>
+      <div class="dl-fields">
+        <div class="form-group" style="margin:0"><label class="form-label">Month</label><input type="month" class="form-input" id="dl-month"></div>
+      </div>
+      <button class="btn btn-primary" onclick="downloadMonthly()" style="width:100%;justify-content:center;">⬇ Download CSV</button>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon">🎯</div>
+      <div class="dl-title">Per-Person Export</div>
+      <div class="dl-desc">Export attendance history for a specific student with attendance and leave summary.</div>
+      <div class="dl-fields">
+        <div class="form-group" style="margin:0"><label class="form-label">Student ID</label><input type="text" class="form-input" id="dl-emp-id" placeholder="e.g. STU001"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div><label class="form-label">From</label><input type="date" class="form-input" id="dl-person-from"></div>
+          <div><label class="form-label">To</label><input type="date" class="form-input" id="dl-person-to"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="downloadPerson()" style="width:100%;justify-content:center;">⬇ Download CSV</button>
+    </div>
+    <div class="dl-card">
+      <div class="dl-icon">🔬</div>
+      <div class="dl-title">Raw Detections Log</div>
+      <div class="dl-desc">Every face detection event with camera ID, confidence score, and direction. For debugging or analysis.</div>
+      <div class="dl-fields">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div><label class="form-label">From</label><input type="date" class="form-input" id="dl-det-from"></div>
+          <div><label class="form-label">To</label><input type="date" class="form-input" id="dl-det-to"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="downloadDetections()" style="width:100%;justify-content:center;">⬇ Download CSV</button>
+    </div>
+    <div class="dl-card" style="border-color:rgba(201,146,42,0.3);">
+      <div class="dl-icon">🔍</div>
+      <div class="dl-title">Audit Report</div>
+      <div class="dl-desc">Run and export the end-of-day audit. Auto-corrects policy errors and flags anomalies.</div>
+      <div class="dl-fields">
+        <div class="form-group" style="margin:0"><label class="form-label">Audit Date</label><input type="date" class="form-input" id="dl-audit-date"></div>
+      </div>
+      <button class="btn btn-gold" onclick="runAndDownloadAudit()" style="width:100%;justify-content:center;" id="audit-dl-btn">🔍 Run &amp; Export</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ HR VIEW ══════════════════════════════════ -->
+<div class="view" id="view-hr">
+  <div id="hr-locked-gate">
+    <div class="hr-locked">
+      <div class="lock-icon">🔒</div>
+      <div class="lock-title">Attendance Administration</div>
+      <div class="lock-sub">Enter your 4-digit HR PIN to continue</div>
+      <div class="pin-input">
+        <input class="pin-digit" maxlength="1" type="password" oninput="pinInput(this,1)" id="p1" autocomplete="off">
+        <input class="pin-digit" maxlength="1" type="password" oninput="pinInput(this,2)" id="p2" autocomplete="off">
+        <input class="pin-digit" maxlength="1" type="password" oninput="pinInput(this,3)" id="p3" autocomplete="off">
+        <input class="pin-digit" maxlength="1" type="password" oninput="pinInput(this,4)" id="p4" autocomplete="off">
+      </div>
+      <div id="pin-error" style="color:var(--red);font-size:12px;display:none;">Incorrect PIN. Try again.</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:6px;">Default PIN: 1234 (change in config.py)</div>
+    </div>
+  </div>
+
+  <div id="hr-content" style="display:none;flex-direction:column;gap:16px;">
+    <div class="hr-header">
+      <div>
+        <div class="hr-title">Attendance Administration Panel</div>
+        <div class="hr-sub">Manage student attendance records, permissions, leave, and manual corrections</div>
+      </div>
+      <button class="btn btn-danger" onclick="lockHR()">🔒 Lock</button>
+    </div>
+    <div class="hr-grid">
+      <div class="hr-card">
+        <div class="hr-card-title">📝 Submit Leave Request</div>
+        <div class="form-group"><label class="form-label">Student ID</label><input type="text" class="form-input" id="hr-emp-id" placeholder="e.g. STU001"></div>
+        <div class="form-group"><label class="form-label">Leave Type</label>
+          <select class="form-input" id="hr-leave-type">
+            <option value="CL">CL — Casual Leave (12/year)</option>
+            <option value="ML">ML — Medical Leave (12/year)</option>
+            <option value="EL">EL — Earned Leave (30/year)</option>
+            <option value="OD">OD — On Duty</option>
+            <option value="CL_HALF">Half-Day CL</option>
+          </select>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div class="form-group"><label class="form-label">From Date</label><input type="date" class="form-input" id="hr-from"></div>
+          <div class="form-group"><label class="form-label">To Date</label><input type="date" class="form-input" id="hr-to"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Reason</label><input type="text" class="form-input" id="hr-reason" placeholder="Brief reason…"></div>
+        <button class="btn btn-gold" onclick="submitLeave()" style="width:100%;justify-content:center;padding:10px;">Submit Leave</button>
+      </div>
+
+      <div class="hr-card">
+        <div class="hr-card-title">📊 Leave Balances</div>
+        <div class="form-group"><label class="form-label">Student ID</label>
+          <div style="display:flex;gap:8px;">
+            <input type="text" class="form-input" id="hr-balance-id" placeholder="STU001" style="flex:1;">
+            <button class="btn btn-primary" onclick="loadBalances()">Check</button>
+          </div>
+        </div>
+        <div id="balance-display" style="margin-top:8px;"><div class="no-data">Enter Student ID above</div></div>
+      </div>
+
+      <div class="hr-card" style="grid-column:1/-1;">
+        <div class="hr-card-title" style="display:flex;justify-content:space-between;align-items:center;">
+          <span>📋 Pending Leave Requests</span>
+          <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;" onclick="loadLeaves()">↻ Refresh</button>
+        </div>
+        <div class="leave-table-wrap">
+          <table class="leave-table">
+            <thead><tr><th>Student ID</th><th>Type</th><th>From</th><th>To</th><th>Reason</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody id="leave-tbody"><tr><td colspan="7" class="no-data">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="hr-card">
+        <div class="hr-card-title">✏️ Manual Attendance Override</div>
+        <div class="form-group"><label class="form-label">Student ID</label><input type="text" class="form-input" id="hr-ov-emp" placeholder="STU001"></div>
+        <div class="form-group"><label class="form-label">Date</label><input type="date" class="form-input" id="hr-ov-date"></div>
+        <div class="form-group"><label class="form-label">Override Status</label>
+          <select class="form-input" id="hr-ov-status">
+            <option>PRESENT</option><option>ABSENT</option><option>PERMISSION</option>
+            <option>HALF_DAY</option><option>CL</option><option>ML</option><option>EL</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Reason / Notes</label><input type="text" class="form-input" id="hr-ov-reason" placeholder="Manual correction reason…"></div>
+        <button class="btn btn-danger" onclick="submitOverride()" style="width:100%;justify-content:center;padding:10px;">⚠ Apply Override</button>
+      </div>
+
+      <div class="hr-card">
+        <div class="hr-card-title">⏱ Monthly Permission Tracker</div>
+        <div class="form-group"><label class="form-label">Month</label><input type="month" class="form-input" id="hr-perm-month"></div>
+        <button class="btn btn-primary" onclick="loadPermissions()" style="margin-bottom:12px;">View Permissions</button>
+        <div id="permission-display"><div class="no-data">Select month and click View</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ AI CHAT VIEW ══════════════════════════════ -->
+<div class="view" id="view-ai">
+
+  <!-- Date selector bar -->
+  <div class="ai-date-bar">
+    <span class="ai-date-label">📅 Attendance Date:</span>
+    <input type="date" class="filter-select" id="ai-date" style="padding:5px 10px;font-size:12px;">
+    <span style="font-size:11px;color:var(--muted)">AI will answer based on this date's data</span>
+  </div>
+
+  <div class="ai-wrap">
+
+    <!-- Chat Panel -->
+    <div class="chat-panel">
+      <div class="chat-header">
+        <div>
+          <div class="chat-header-title">
+            <div class="ai-status-dot"></div>
+            FaceTrack AI Assistant
+          </div>
+          <div class="chat-header-sub">Powered by Claude · Ask anything about attendance</div>
+        </div>
+        <button class="btn" style="background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.2);padding:5px 12px;font-size:11px;" onclick="clearChat()">🗑 Clear</button>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <!-- Welcome message -->
+        <div class="msg bot">
+          <div class="msg-avatar">🤖</div>
+          <div>
+            <div class="msg-bubble">
+              👋 <b>Vanakkam! I'm FaceTrack AI.</b><br><br>
+              I can answer questions about student attendance — who's present, absent, late, on leave, and more.<br><br>
+              Try asking: <i>"Who is absent today?"</i> or <i>"Give me this month's summary"</i>
+            </div>
+            <div class="msg-time">Just now</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <textarea class="chat-input" id="chat-input" placeholder="Ask anything about attendance…" rows="1"
+          onkeydown="handleChatKey(event)" oninput="autoResize(this)"></textarea>
+        <button class="send-btn" id="send-btn" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+
+    <!-- Suggestions Panel -->
+    <div class="suggestions-panel">
+      <div class="suggestions-header">💡 Suggested Questions</div>
+      <div class="suggestions-list" id="suggestions-list">
+        <div class="no-data"><span class="spinner"></span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ══ HLC ALERTS VIEW ══════════════════════════ -->
+<div class="view" id="view-hlc">
+  <div class="section-title" style="margin-bottom:8px;">📹 HLC Door Cameras</div>
+  <div id="hlc-camera-tiles" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-bottom:20px;">
+    <div class="no-data">Loading cameras…</div>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+    <div>
+      <div class="section-title">⚑ Unauthorized Overstay Alerts</div>
+      <div class="section-sub">Non-HLC-member present in the room for more than 5 minutes — auto-detected. HLC team members are never flagged.</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <input type="date" class="filter-select" id="hlc-view-date" onchange="loadHLCAlerts()">
+      <button class="btn btn-primary" onclick="loadHLCAlerts()">↻ Refresh</button>
+      <button class="btn btn-danger" onclick="hlcForceCheck()" title="Trigger an immediate check now">⚡ Force Check</button>
+    </div>
+  </div>
+
+  <!-- Engine Status Card -->
+  <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="hlc-engine-dot" id="hlc-view-dot"></div>
+      <div>
+        <div style="font-size:12px;font-weight:700;" id="hlc-view-engine-status">Engine status unknown</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:1px;" id="hlc-view-engine-detail">Fetching…</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:20px;font-size:12px;color:var(--sub);">
+      <span>Threshold: <b id="hlc-threshold-v" style="color:var(--red);">—</b></span>
+      <span>Check Interval: <b id="hlc-interval-v" style="color:var(--blue);">—</b></span>
+      <span>Alerts Today: <b id="hlc-total-v" style="color:var(--maroon);">—</b></span>
+    </div>
+  </div>
+
+  <!-- Alerts Table -->
+  <div class="table-wrap">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:var(--off);border-bottom:1px solid var(--border);">
+      <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--sub);">Alert Log</span>
+      <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);" id="hlc-view-date-label"></span>
+    </div>
+    <div id="hlc-view-body" style="padding:8px;">
+      <div class="no-data"><span class="spinner"></span> Loading alerts…</div>
+    </div>
+  </div>
+</div>
+
+</main>
+<div id="toast-container"></div>
+
+<script>
+// ─────────────────────────────────────
+//  FaceTrack Pro — Dashboard JS
+//  White/Maroon EGSPEC Theme
+//  All features from dashboard(5)
+// ─────────────────────────────────────
+
+const API = '';
+let ws = null;
+let allAttendanceRows = [];
+let hrUnlocked = false;
+const HR_PIN = '1234';
+
+// Clock
+function updateClock() {
+  document.getElementById('clock').textContent =
+    new Date().toLocaleTimeString('en-IN', { hour12: false });
+}
+setInterval(updateClock, 1000); updateClock();
+
+// Default dates
+function initDates() {
+  const today = new Date().toISOString().split('T')[0];
+  const thisMonth = today.slice(0,7);
+  const yesterday = new Date(Date.now()-86400000).toISOString().split('T')[0];
+  ['dl-daily-date','att-date','hr-ov-date','dl-audit-date','hlc-view-date'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.value = today;
+  });
+  ['dl-from','dl-det-from','dl-person-from'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.value = yesterday;
+  });
+  ['dl-to','dl-det-to','dl-person-to'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.value = today;
+  });
+  ['dl-month','hr-perm-month'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.value = thisMonth;
+  });
+}
+initDates();
+
+// View switching
+function switchView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    if (t.textContent.toLowerCase().includes(name) ||
+        (name === 'live' && t.textContent.includes('Live'))) t.classList.add('active');
+  });
+  if (name === 'attendance') loadAttendance();
+  if (name === 'hlc') { loadHLCCameras(); loadHLCStatus(); loadHLCAlerts(); }
+}
+
+// WebSocket
+function connectWS() {
+  const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+  ws = new WebSocket(`${proto}://${location.host}/ws`);
+  ws.onopen = () => {
+    document.getElementById('live-status').textContent = 'Live';
+    document.getElementById('cam-status').textContent = '● Camera active';
+  };
+  ws.onmessage = (e) => {
+    const msg = JSON.parse(e.data);
+    if (msg.type === 'init') {
+      updateStats(msg.stats);
+      if (msg.events) msg.events.forEach(addEvent);
+    } else if (msg.type === 'stats') {
+      updateStats(msg.stats);
+      if (msg.fps !== undefined) {
+        document.getElementById('s-fps').textContent = Math.round(msg.fps);
+        document.getElementById('fps-display').textContent = `FPS: ${Math.round(msg.fps)}`;
+      }
+    } else if (msg.type === 'attendance') {
+      addEvent(msg.data);
+      updateStats(null);
+      showToast(`${msg.data.direction === 'IN' ? '→' : '←'} ${msg.data.name} · ${msg.data.status}`, 'attend');
+    } else if (msg.type === 'hlc_event') {
+      const p = msg.payload;
+      addHLCAlertLive(p);
+      showToast(`⚑ HLC: ${p.name} — ${Math.round(p.duration_min)}m inside`, 'error');
+      if (p.push) fireHLCPushNotification(p);
+    }
+  };
+  ws.onclose = () => {
+    document.getElementById('live-status').textContent = 'Reconnecting…';
+    setTimeout(connectWS, 3000);
+  };
+  ws.onerror = () => ws.close();
+}
+
+// Stats
+async function updateStats(stats) {
+  if (!stats) {
+    try { const r = await fetch(API + '/api/stats'); stats = await r.json(); } catch { return; }
+  }
+  const set = (id, val) => { const el = document.getElementById(id); if(el) el.textContent = val; };
+  const total   = stats.total_faculty || 0;
+  const present = stats.present || 0;
+  const absent  = stats.absent  || 0;
+  const perm    = stats.permission || 0;
+  const leave   = (stats.cl||0) + (stats.ml||0) + (stats.el||0);
+  set('s-total',   total);
+  set('s-present', present);
+  set('s-absent',  absent);
+  set('s-perm',    perm);
+  set('s-leave',   leave);
+  set('pc-present', present);
+  set('pc-absent',  absent);
+  set('s-date', new Date().toLocaleDateString('en-IN', { day:'2-digit', month:'short' }));
+  if (total > 0) {
+    set('s-present-pct', Math.round(present/total*100) + '%');
+    set('s-absent-pct',  Math.round(absent/total*100) + '%');
+  }
+  updateDonut(present, absent, perm, leave);
+  loadPresenceLists();
+}
+
+// Donut chart
+function updateDonut(present, absent, perm, leave) {
+  const svg = document.getElementById('donut-svg');
+  const legend = document.getElementById('donut-legend');
+  const total = present + absent + perm + leave;
+  if (total === 0) return;
+  const data = [
+    { val: present, color: '#0E7A4A', label: 'Present' },
+    { val: absent,  color: '#C0392B', label: 'Absent'  },
+    { val: perm,    color: '#D4600A', label: 'Permission' },
+    { val: leave,   color: '#AF005F', label: 'Leave'   },
+  ].filter(d => d.val > 0);
+
+  const cx=40, cy=40, r=28, ir=18;
+  let angle = -Math.PI/2, paths = '';
+  data.forEach(d => {
+    const sweep = (d.val/total)*Math.PI*2;
+    const x1=cx+r*Math.cos(angle), y1=cy+r*Math.sin(angle);
+    const x2=cx+r*Math.cos(angle+sweep), y2=cy+r*Math.sin(angle+sweep);
+    const ix1=cx+ir*Math.cos(angle), iy1=cy+ir*Math.sin(angle);
+    const ix2=cx+ir*Math.cos(angle+sweep), iy2=cy+ir*Math.sin(angle+sweep);
+    const lg = sweep > Math.PI ? 1 : 0;
+    paths += `<path d="M ${x1} ${y1} A ${r} ${r} 0 ${lg} 1 ${x2} ${y2} L ${ix2} ${iy2} A ${ir} ${ir} 0 ${lg} 0 ${ix1} ${iy1} Z" fill="${d.color}" opacity="0.9"/>`;
+    angle += sweep;
+  });
+  svg.innerHTML = paths + `<text x="40" y="44" text-anchor="middle" font-family="Playfair Display" font-size="13" font-weight="800" fill="#0F1623">${total}</text>`;
+  legend.innerHTML = data.map(d =>
+    `<div class="legend-item"><div class="legend-dot" style="background:${d.color}"></div><span>${d.label}: <b style="color:var(--text)">${d.val}</b></span></div>`
+  ).join('');
+}
+
+// Events
+function addEvent(ev) {
+  const list = document.getElementById('events-list');
+  if (list.querySelector('.no-data')) list.innerHTML = '';
+  const statusClass = {
+    'PRESENT':'s-present','ABSENT':'s-absent','PERMISSION':'s-perm',
+    'HALF_DAY':'s-halfday','CL':'s-leave','ML':'s-leave','EL':'s-leave','LOGGED':'s-logged'
+  }[ev.status] || 's-logged';
+  const dirIn = (ev.direction || 'IN') === 'IN';
+  const item = document.createElement('div');
+  item.className = 'event-item';
+  item.innerHTML = `
+    <div class="event-dir ${dirIn ? 'in' : 'out'}">${dirIn ? '→' : '←'}</div>
+    <div class="event-info">
+      <div class="event-name">${ev.name || ev.student_id}</div>
+      <div class="event-meta">${ev.time} · ${ev.confidence || ''}</div>
+    </div>
+    <div class="status-pill ${statusClass}">${ev.status || 'LOGGED'}</div>`;
+  list.insertBefore(item, list.firstChild);
+  if (list.children.length > 40) list.removeChild(list.lastChild);
+}
+function clearEvents() {
+  document.getElementById('events-list').innerHTML = '<div class="no-data">Cleared</div>';
+}
+
+// Presence lists
+async function loadPresenceLists() {
+  try {
+    const r = await fetch(API + '/api/attendance');
+    const data = await r.json();
+    const present = data.filter(d => ['PRESENT','PERMISSION','HALF_DAY','CL','ML','EL','OD'].includes(d.final_status));
+    const absent  = data.filter(d => !present.find(p => p.student_id === d.student_id));
+    renderPresence('present-list', present, true);
+    renderPresence('absent-list', absent, false);
+  } catch(e) { console.error('loadPresenceLists:', e); }
+}
+function getInitials(name) {
+  if (!name) return '?';
+  return name.split(' ').slice(0,2).map(w => w[0]).join('').toUpperCase();
+}
+function renderPresence(listId, rows, isPresent) {
+  const el = document.getElementById(listId);
+  if (!rows.length) {
+    el.innerHTML = `<div class="no-data">${isPresent ? 'None present yet' : 'All present!'}</div>`;
+    return;
+  }
+  const avatarClass = isPresent ? 'avatar-present' : 'avatar-absent';
+  const statusMap = {
+    'PRESENT':'s-present','PERMISSION':'s-perm','HALF_DAY':'s-halfday',
+    'CL':'s-leave','ML':'s-leave','EL':'s-leave','ABSENT':'s-absent'
+  };
+  el.innerHTML = rows.map(r => {
+    const status = r.final_status || 'ABSENT';
+    const sc = statusMap[status] || 's-logged';
+    const time = r.first_seen ? r.first_seen.split('T').pop().slice(0,5) : '--:--';
+    return `<div class="person-row">
+      <div class="avatar ${avatarClass}">${getInitials(r.name)}</div>
+      <div style="flex:1;min-width:0;">
+        <div class="person-name">${r.name || r.student_id}</div>
+        <div class="person-time">${r.student_id} · In: ${time}</div>
+      </div>
+      <div class="status-pill ${sc}">${status}</div>
+    </div>`;
+  }).join('');
+}
+
+// College Events
+async function loadCollegeEvents() {
+  const el = document.getElementById('college-events-list');
+  const mockEvents = [
+    { title: "National Science Day Celebration", date: "28 Feb 2026", category: "Academic" },
+    { title: "Inter-College Technical Symposium — EGSPEC 2026", date: "15 Mar 2026", category: "Technical" },
+    { title: "NBA Accreditation Visit — AI & DS Dept.", date: "20 Mar 2026", category: "Accreditation" },
+    { title: "Industry Expert Talk: Edge AI in Manufacturing", date: "22 Mar 2026", category: "Guest Lecture" },
+    { title: "Annual Sports Day", date: "28 Mar 2026", category: "Sports" },
+    { title: "Project Expo 2026 — Final Year Presentations", date: "5 Apr 2026", category: "Academic" },
+  ];
+  try {
+    const r = await fetch(API + '/api/college-events');
+    if (r.ok) { renderCollegeEvents(el, await r.json()); return; }
+  } catch {}
+  renderCollegeEvents(el, mockEvents);
+}
+function renderCollegeEvents(el, events) {
+  if (!events.length) { el.innerHTML = '<div class="no-data">No upcoming events</div>'; return; }
+  el.innerHTML = events.slice(0,5).map(e => `
+    <div class="college-event-item">
+      <div class="college-event-title">${e.title}</div>
+      <div class="college-event-date">📅 ${e.date}${e.category ? '  ·  ' + e.category : ''}</div>
+    </div>`).join('');
+}
+
+// Attendance table
+async function loadAttendance() {
+  const date = document.getElementById('att-date').value;
+  const tbody = document.getElementById('att-tbody');
+  tbody.innerHTML = '<tr><td colspan="8" class="no-data"><span class="spinner"></span> Loading…</td></tr>';
+  try {
+    const r = await fetch(API + `/api/attendance?date=${date}`);
+    const data = await r.json();
+    allAttendanceRows = data;
+    renderTable(data);
+  } catch(e) {
+    tbody.innerHTML = `<tr><td colspan="8" class="no-data" style="color:var(--red)">Error: ${e.message}</td></tr>`;
+  }
+}
+function statusPill(status) {
+  const map = {
+    'PRESENT':'s-present','ABSENT':'s-absent','PERMISSION':'s-perm',
+    'HALF_DAY':'s-halfday','CL':'s-leave','ML':'s-leave','EL':'s-leave',
+    'OD':'s-perm','FLAGGED':'s-absent'
+  };
+  return `<span class="status-pill ${map[status]||'s-logged'}">${status||'—'}</span>`;
+}
+function renderTable(rows) {
+  const tbody = document.getElementById('att-tbody');
+  if (!rows.length) { tbody.innerHTML = '<tr><td colspan="8" class="no-data">No records found</td></tr>'; return; }
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td><span class="emp-id">${r.student_id}</span></td>
+      <td><span class="emp-name">${r.name||'—'}</span></td>
+      <td>${statusPill(r.morning_status)}</td>
+      <td>${statusPill(r.evening_status)}</td>
+      <td>${statusPill(r.final_status)}</td>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)">${r.first_seen?r.first_seen.split('T').pop().slice(0,8):'—'}</td>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)">${r.last_seen?r.last_seen.split('T').pop().slice(0,8):'—'}</td>
+      <td style="font-size:11px;color:var(--muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.notes||r.audit_notes||''}</td>
+    </tr>`).join('');
+}
+function filterTable() {
+  const q = document.getElementById('att-search').value.toLowerCase();
+  const status = document.getElementById('att-status-filter').value;
+  renderTable(allAttendanceRows.filter(r => {
+    const mq = !q || (r.name||'').toLowerCase().includes(q) || (r.student_id||'').toLowerCase().includes(q);
+    const ms = !status || r.final_status === status;
+    return mq && ms;
+  }));
+}
+function quickExport() {
+  const date = document.getElementById('att-date').value;
+  window.open(API + `/api/export/attendance?from_date=${date}&to_date=${date}`, '_blank');
+}
+
+// Audit
+async function runAudit() {
+  const date = document.getElementById('att-date').value;
+  const strip = document.getElementById('audit-strip');
+  const spinner = document.getElementById('audit-spinner');
+  const grid = document.getElementById('audit-result-grid');
+  strip.style.display = 'block'; spinner.style.display = 'inline-block'; grid.innerHTML = '';
+  document.getElementById('audit-date-label').textContent = date;
+  try {
+    const r = await fetch(API + `/api/audit/run?work_date=${date}`, { method: 'POST' });
+    const data = await r.json();
+    spinner.style.display = 'none';
+    grid.innerHTML = [
+      { val: data.total_faculty, label: 'Students',     color: 'var(--blue)'   },
+      { val: data.clean,         label: 'Clean',       color: 'var(--green)'  },
+      { val: data.corrected,     label: 'Corrected',   color: 'var(--orange)' },
+      { val: data.flagged,       label: 'Flagged',     color: 'var(--red)'    },
+      { val: data.absent_auto,   label: 'Auto-Absent', color: 'var(--muted)'  },
+    ].map(s => `<div class="audit-stat">
+      <div class="audit-stat-val" style="color:${s.color}">${s.val??'—'}</div>
+      <div class="audit-stat-label">${s.label}</div></div>`).join('');
+    showToast(`Audit complete: ${data.corrected} corrected, ${data.flagged} flagged`, 'warn');
+    loadAttendance();
+  } catch(e) {
+    spinner.style.display = 'none';
+    showToast('Audit failed: ' + e.message, 'error');
+  }
+}
+
+// Downloads
+function downloadDaily()   { const d=document.getElementById('dl-daily-date').value; window.open(API+`/api/export/attendance?from_date=${d}&to_date=${d}`,'_blank'); }
+function downloadRange()   { const f=document.getElementById('dl-from').value,t=document.getElementById('dl-to').value; window.open(API+`/api/export/attendance?from_date=${f}&to_date=${t}`,'_blank'); }
+function downloadMonthly() { window.open(API+`/api/export/monthly?year_month=${document.getElementById('dl-month').value}`,'_blank'); }
+function downloadPerson()  {
+  const id=document.getElementById('dl-emp-id').value.trim();
+  if(!id){showToast('Enter Student ID','warn');return;}
+  window.open(API+`/api/export/attendance?student_id=${id}&from_date=${document.getElementById('dl-person-from').value}&to_date=${document.getElementById('dl-person-to').value}`,'_blank');
+}
+function downloadDetections() {
+  window.open(API+`/api/export/detections?from_date=${document.getElementById('dl-det-from').value}&to_date=${document.getElementById('dl-det-to').value}`,'_blank');
+}
+async function runAndDownloadAudit() {
+  const btn=document.getElementById('audit-dl-btn');
+  const date=document.getElementById('dl-audit-date').value;
+  btn.textContent='⏳ Running…'; btn.disabled=true;
+  try {
+    await fetch(API+`/api/audit/run?work_date=${date}`,{method:'POST'});
+    window.open(API+`/api/export/attendance?from_date=${date}&to_date=${date}`,'_blank');
+    showToast('Audit done — downloading attendance CSV','info');
+  } catch(e) { showToast('Failed: '+e.message,'error'); }
+  btn.textContent='🔍 Run & Export'; btn.disabled=false;
+}
+
+// HR PIN
+function pinInput(el, pos) {
+  if (el.value.length===1 && pos<4) document.getElementById('p'+(pos+1)).focus();
+  if (pos===4) checkPin();
+}
+function checkPin() {
+  const pin = ['p1','p2','p3','p4'].map(id => document.getElementById(id).value).join('');
+  if (pin === HR_PIN) {
+    hrUnlocked = true;
+    document.getElementById('hr-locked-gate').style.display = 'none';
+    document.getElementById('hr-content').style.display = 'flex';
+    loadLeaves();
+    showToast('HR Access Granted', 'info');
+  } else {
+    document.getElementById('pin-error').style.display = 'block';
+    ['p1','p2','p3','p4'].forEach(id => { document.getElementById(id).value = ''; });
+    document.getElementById('p1').focus();
+    setTimeout(() => document.getElementById('pin-error').style.display = 'none', 2000);
+  }
+}
+function lockHR() {
+  hrUnlocked = false;
+  document.getElementById('hr-locked-gate').style.display = 'block';
+  document.getElementById('hr-content').style.display = 'none';
+  ['p1','p2','p3','p4'].forEach(id => { document.getElementById(id).value=''; });
+  document.getElementById('p1').focus();
+}
+
+// HR: Leave
+async function submitLeave() {
+  const emp=document.getElementById('hr-emp-id').value.trim();
+  const type=document.getElementById('hr-leave-type').value;
+  const from=document.getElementById('hr-from').value;
+  const to=document.getElementById('hr-to').value;
+  const reason=document.getElementById('hr-reason').value;
+  if (!emp||!from||!to) { showToast('Fill all required fields','warn'); return; }
+  const days = Math.round((new Date(to) - new Date(from)) / 86400000) + 1;
+  try {
+    const r=await fetch(API+'/hr/leave/apply',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({student_id:emp,leave_type:type,from_date:from,to_date:to,days,reason})});
+    const d=await r.json();
+    showToast('Leave submitted: '+(d.message||'OK'),'info'); loadLeaves();
+  } catch(e) { showToast('Error: '+e.message,'error'); }
+}
+async function loadLeaves() {
+  const tbody=document.getElementById('leave-tbody');
+  try {
+    const r=await fetch(API+'/hr/leaves');
+    if (!r.ok) throw new Error('No HR endpoint');
+    const data=await r.json();
+    if (!data.length) { tbody.innerHTML='<tr><td colspan="7" class="no-data">No pending leaves</td></tr>'; return; }
+    tbody.innerHTML=data.map(l=>`<tr>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;">${l.student_id}</td>
+      <td>${statusPill(l.leave_type)}</td>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;">${l.from_date}</td>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;">${l.to_date}</td>
+      <td style="font-size:11px;">${l.reason||'—'}</td>
+      <td>${statusPill(l.status||'PENDING')}</td>
+      <td>
+        <button class="btn btn-green" style="padding:3px 9px;font-size:10px;" onclick="approveLeave(${l.id})">✓</button>
+        <button class="btn btn-danger" style="padding:3px 9px;font-size:10px;margin-left:4px;" onclick="rejectLeave(${l.id})">✗</button>
+      </td></tr>`).join('');
+  } catch {
+    tbody.innerHTML='<tr><td colspan="7" class="no-data" style="color:var(--muted)">HR API not available — configure hr_routes.py</td></tr>';
+  }
+}
+async function approveLeave(id) {
+  try {
+    await fetch(API+`/hr/leave/approve/${id}`,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({approved_by:'admin',remarks:''})});
+    showToast('Leave approved','info'); loadLeaves();
+  } catch(e) { showToast('Error: '+e.message,'error'); }
+}
+async function rejectLeave(id) {
+  const reason = prompt('Reason for rejection:');
+  if (reason === null) return;
+  try {
+    await fetch(API+`/hr/leave/reject/${id}`,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({rejected_by:'admin',reason:reason||'Rejected via dashboard'})});
+    showToast('Leave rejected','warn'); loadLeaves();
+  } catch(e) { showToast('Error: '+e.message,'error'); }
+}
+async function loadBalances() {
+  const id=document.getElementById('hr-balance-id').value.trim();
+  const el=document.getElementById('balance-display');
+  if (!id) { showToast('Enter Student ID','warn'); return; }
+  try {
+    const r=await fetch(API+`/hr/balance/${id}`);
+    if (!r.ok) throw new Error('Not found');
+    const d=await r.json();
+    el.innerHTML=`
+      <div class="leave-bar-row"><span class="leave-bar-label">CL</span>
+        <div class="leave-bar-track"><div class="leave-bar-fill lb-cl" style="width:${(d.cl_remaining/12)*100}%"></div></div>
+        <span class="leave-bar-val">${d.cl_remaining}/12</span></div>
+      <div class="leave-bar-row"><span class="leave-bar-label">ML</span>
+        <div class="leave-bar-track"><div class="leave-bar-fill lb-ml" style="width:${(d.ml_remaining/12)*100}%"></div></div>
+        <span class="leave-bar-val">${d.ml_remaining}/12</span></div>
+      <div class="leave-bar-row"><span class="leave-bar-label">EL</span>
+        <div class="leave-bar-track"><div class="leave-bar-fill lb-el" style="width:${(d.el_remaining/30)*100}%"></div></div>
+        <span class="leave-bar-val">${d.el_remaining}/30</span></div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px;">
+        Permission this month: <b style="color:${d.perm_this_month>=2?'var(--red)':'var(--text)'}">${d.perm_this_month}/2</b></div>`;
+  } catch {
+    el.innerHTML='<div style="font-size:11px;color:var(--muted)">Could not load balances — check hr_database.py</div>';
+  }
+}
+async function submitOverride() {
+  const emp=document.getElementById('hr-ov-emp').value.trim();
+  const date=document.getElementById('hr-ov-date').value;
+  const status=document.getElementById('hr-ov-status').value;
+  const reason=document.getElementById('hr-ov-reason').value;
+  if (!emp||!date) { showToast('Fill Student ID and Date','warn'); return; }
+  if (!confirm(`Override ${emp} attendance on ${date} → ${status}?`)) return;
+  try {
+    await fetch(API+'/hr/override',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({student_id:emp,work_date:date,new_status:status,reason})});
+    showToast(`Override applied: ${emp} → ${status}`,'warn');
+  } catch(e) { showToast('Override error: '+e.message,'error'); }
+}
+async function loadPermissions() {
+  const month=document.getElementById('hr-perm-month').value;
+  const el=document.getElementById('permission-display');
+  try {
+    const r=await fetch(API+`/api/hr/permissions?month=${month}`);
+    if (!r.ok) throw new Error();
+    const data=await r.json();
+    el.innerHTML=data.map(p=>`
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;">
+        <span style="font-weight:600">${p.name||p.student_id}</span>
+        <span style="font-family:'DM Mono',monospace;color:${p.count>=2?'var(--red)':'var(--orange)'}">
+          ${p.count} permission${p.count!==1?'s':''}${p.count>=2?' ⚠':''}
+        </span></div>`).join('')||'<div class="no-data">No permissions found</div>';
+  } catch {
+    el.innerHTML='<div style="font-size:11px;color:var(--muted)">Permissions API not available</div>';
+  }
+}
+
+// Toast
+function showToast(msg, type='info') {
+  const container=document.getElementById('toast-container');
+  const toast=document.createElement('div');
+  const icons={attend:'→',info:'ℹ',warn:'⚠',error:'✗'};
+  toast.className=`toast toast-${type}`;
+  toast.innerHTML=`<span style="font-size:14px">${icons[type]||'ℹ'}</span><span>${msg}</span>`;
+  container.appendChild(toast);
+  setTimeout(()=>toast.remove(),4200);
+}
+
+// ── HLC Alert Engine ───────────────────────────────────
+let hlcLiveAlerts = [];
+
+async function loadHLCCameras() {
+  const el = document.getElementById('hlc-camera-tiles');
+  try {
+    const r = await fetch(API + '/api/hlc/cameras');
+    const d = await r.json();
+    if (!d.cameras || !d.cameras.length) {
+      el.innerHTML = '<div class="no-data">No HLC cameras configured</div>';
+      return;
+    }
+    el.innerHTML = d.cameras.map(c => `
+      <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#000;">
+        <img src="/stream/hlc/${c.camera_id}" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;"
+             alt="${c.label}" onerror="this.style.opacity=0.3">
+        <div style="padding:8px 10px;font-size:12px;font-weight:600;background:var(--off);">
+          ${c.label} <span style="color:var(--muted);font-weight:400;">(${c.camera_id})</span>
+        </div>
+      </div>`).join('');
+  } catch(e) {
+    el.innerHTML = '<div class="no-data">Could not load HLC cameras</div>';
+  }
+}
+
+async function loadHLCStatus() {
+  try {
+    const r = await fetch(API + '/api/hlc/status');
+    const d = await r.json();
+    const running = d.running;
+    // Live panel dot
+    const dot = document.getElementById('hlc-engine-dot');
+    const lbl = document.getElementById('hlc-engine-label');
+    const thrLbl = document.getElementById('hlc-threshold-label');
+    if (dot) { dot.className = 'hlc-engine-dot' + (running ? '' : ' off'); }
+    if (lbl) lbl.textContent = running ? 'Alert engine running' : 'Alert engine stopped';
+    if (thrLbl) thrLbl.textContent = d.threshold_minutes ? `Threshold: ${d.threshold_minutes}m` : '';
+    // Full view dots
+    const vdot = document.getElementById('hlc-view-dot');
+    if (vdot) vdot.className = 'hlc-engine-dot' + (running ? '' : ' off');
+    const vstatus = document.getElementById('hlc-view-engine-status');
+    if (vstatus) vstatus.textContent = running ? '⚑ HLC Alert Engine is RUNNING' : '⏹ HLC Alert Engine is STOPPED';
+    const vdetail = document.getElementById('hlc-view-engine-detail');
+    if (vdetail) vdetail.textContent = running
+      ? `Checking every ${d.check_interval_secs}s · Threshold: ${d.threshold_minutes} minutes`
+      : 'Engine not running — check main.py startup';
+    const thr = document.getElementById('hlc-threshold-v');
+    if (thr) thr.textContent = d.threshold_minutes ? d.threshold_minutes + ' min' : '—';
+    const ivl = document.getElementById('hlc-interval-v');
+    if (ivl) ivl.textContent = d.check_interval_secs ? d.check_interval_secs + 's' : '—';
+  } catch { /* server might not be live in dev */ }
+}
+
+async function loadHLCAlerts() {
+  const dateEl = document.getElementById('hlc-view-date');
+  const date = dateEl ? dateEl.value : new Date().toISOString().split('T')[0];
+  const lbl = document.getElementById('hlc-view-date-label');
+  if (lbl) lbl.textContent = date;
+  const body = document.getElementById('hlc-view-body');
+  if (!body) return;
+  body.innerHTML = '<div class="no-data"><span class="spinner"></span> Loading…</div>';
+  try {
+    const r = await fetch(API + `/api/hlc/alerts?date=${date}`);
+    const d = await r.json();
+    const alerts = d.alerts || [];
+    const totalEl = document.getElementById('hlc-total-v');
+    if (totalEl) totalEl.textContent = alerts.length;
+    if (!alerts.length) {
+      body.innerHTML = '<div class="no-data" style="color:var(--green)">✓ No overstay alerts for this date</div>';
+      return;
+    }
+    body.innerHTML = `<table class="att-table">
+      <thead><tr>
+        <th>Alert ID</th><th>Visitor ID</th><th>Name</th><th>Role</th><th>Dept</th>
+        <th>Entry Time</th><th>Duration</th><th>Visit #</th><th>Triggered At</th>
+      </tr></thead>
+      <tbody>${alerts.map(a => `<tr>
+        <td class="emp-id">#${a.id||a.alert_id||'—'}</td>
+        <td class="emp-id">${a.visitor_id||'—'}</td>
+        <td class="emp-name">${a.visitor_name||a.name||'Unknown'}</td>
+        <td style="color:var(--sub)">${[a.designation, a.staff_category].filter(Boolean).join(' / ')||'—'}</td>
+        <td style="color:var(--sub)">${a.dept||'—'}</td>
+        <td style="font-family:'DM Mono',monospace;font-size:11px">${a.entry_time||'—'}</td>
+        <td><span style="background:var(--red-l);color:var(--red);padding:2px 8px;border-radius:20px;font-family:'DM Mono',monospace;font-size:10px;font-weight:700">
+          ${Math.round(a.duration_at_trigger||0)} min
+        </span></td>
+        <td style="font-family:'DM Mono',monospace;font-size:11px">${a.visit_number||1}</td>
+        <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)">${(a.created_at||a.triggered_at||'').slice(11,19)||'—'}</td>
+      </tr>`).join('')}</tbody>
+    </table>`;
+  } catch(e) {
+    body.innerHTML = `<div class="no-data">Could not load HLC alerts — check server.<br><small style="font-family:'DM Mono',monospace;color:var(--muted)">${e.message}</small></div>`;
+  }
+}
+
+function addHLCAlertLive(payload) {
+  hlcLiveAlerts.unshift(payload);
+  const list = document.getElementById('hlc-alerts-list');
+  const badge = document.getElementById('hlc-live-count');
+  if (badge) badge.textContent = hlcLiveAlerts.length;
+  if (!list) return;
+  const item = document.createElement('div');
+  item.className = 'hlc-alert-item';
+  item.innerHTML = `
+    <div class="hlc-alert-icon">⚑</div>
+    <div class="hlc-alert-body">
+      <div class="hlc-alert-name">${payload.name} <span style="font-size:10px;font-weight:400;color:var(--muted)">(${payload.visitor_id})</span></div>
+      <div class="hlc-alert-meta">${[payload.designation, payload.staff_category].filter(Boolean).join(' / ')||''} &nbsp;|&nbsp; Dept: ${payload.dept||'—'} &nbsp;|&nbsp; Entry: ${payload.entry_time} &nbsp;|&nbsp; Inside: ${Math.round(payload.duration_min)} min &nbsp;|&nbsp; Visit #${payload.visit_number}</div>
+    </div>
+    <div class="hlc-alert-time">${payload.timestamp}</div>`;
+  // Remove empty state
+  const empty = list.querySelector('.hlc-empty');
+  if (empty) empty.remove();
+  list.prepend(item);
+  // Keep max 20 items
+  while (list.children.length > 20) list.removeChild(list.lastChild);
+}
+
+async function hlcForceCheck() {
+  try {
+    showToast('⚡ Triggering HLC force-check…', 'info');
+    const r = await fetch(API + '/api/hlc/alert/force_check', { method: 'POST' });
+    const d = await r.json();
+    showToast(d.status === 'ok' ? '✓ HLC check triggered' : `⚠ ${d.message}`, d.status === 'ok' ? 'info' : 'warn');
+    setTimeout(loadHLCAlerts, 1500);
+  } catch(e) { showToast('HLC force-check failed: ' + e.message, 'error'); }
+}
+
+// Camera heartbeat
+setInterval(()=>{
+  const img=document.getElementById('camera-feed');
+  if (img.naturalWidth===0 && !img.complete) img.src='/stream?'+Date.now();
+},15000);
+
+// Browser push notifications for HLC overstay alerts.
+// Works whenever this dashboard tab is open (no server credentials needed —
+// this is Phase 1 of the alert rollout; email/WhatsApp come later once
+// creds are configured server-side, see config.py NotifyConfig).
+function requestHLCNotifyPermission() {
+  if (!('Notification' in window)) return;
+  if (Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+}
+function fireHLCPushNotification(p) {
+  if (!('Notification' in window) || Notification.permission !== 'granted') return;
+  const role = [p.designation, p.staff_category].filter(Boolean).join(' / ') || '';
+  const n = new Notification(`⚑ HLC Overstay — ${p.name}`, {
+    body: `${role ? role + '\n' : ''}Inside ${Math.round(p.duration_min)} min (entry ${p.entry_time})`,
+    tag: `hlc-alert-${p.alert_id}`,
+    requireInteraction: true,
+  });
+  n.onclick = () => { window.focus(); showTab('hlc'); n.close(); };
+}
+
+// Init
+requestHLCNotifyPermission();
+connectWS();
+updateStats(null);
+loadCollegeEvents();
+loadHLCStatus();
+setInterval(loadHLCStatus, 30000);
+setInterval(()=>{
+  if(document.getElementById('view-live').classList.contains('active')) loadPresenceLists();
+},30000);
+setInterval(()=>updateStats(null),10000);
+
+// ── AI Chat ────────────────────────────────────────────────
+document.getElementById('ai-date').value = new Date().toISOString().split('T')[0];
+
+async function loadSuggestions() {
+  try {
+    const r = await fetch(API + '/api/ai/suggestions');
+    const data = await r.json();
+    document.getElementById('suggestions-list').innerHTML =
+      data.suggestions.map(s => `<button class="suggestion-chip" onclick="useSuggestion(\`${s}\`)">${s}</button>`).join('');
+  } catch {
+    const fallback = [
+      "Who is absent today?","How many students are present?","Show late arrivals today",
+      "Who is on leave this week?","Monthly attendance summary","Which student has lowest attendance?",
+      "How many permissions this month?","Download today's CSV","Who is absent more than 3 days?","Give full attendance report"
+    ];
+    document.getElementById('suggestions-list').innerHTML =
+      fallback.map(s => `<button class="suggestion-chip" onclick="useSuggestion(\`${s}\`)">${s}</button>`).join('');
+  }
+}
+loadSuggestions();
+
+function useSuggestion(text) {
+  document.getElementById('chat-input').value = text;
+  sendMessage();
+}
+function handleChatKey(e) {
+  if (e.key==='Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+function autoResize(el) {
+  el.style.height='auto';
+  el.style.height=Math.min(el.scrollHeight,100)+'px';
+}
+function getTime() {
+  return new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:true});
+}
+function appendMessage(role, text) {
+  const container=document.getElementById('chat-messages');
+  const div=document.createElement('div');
+  div.className=`msg ${role}`;
+  const avatar=role==='bot'?'🤖':'👤';
+  const formatted=text
+    .replace(/\*\*(.*?)\*\*/g,'<b>$1</b>')
+    .replace(/\*(.*?)\*/g,'<i>$1</i>')
+    .replace(/\n/g,'<br>')
+    .replace(/- (.*?)(<br>|$)/g,'• $1<br>');
+  div.innerHTML=`
+    <div class="msg-avatar">${avatar}</div>
+    <div>
+      <div class="msg-bubble">${formatted}</div>
+      <div class="msg-time">${getTime()}</div>
+    </div>`;
+  container.appendChild(div);
+  container.scrollTop=container.scrollHeight;
+}
+function appendTyping() {
+  const container=document.getElementById('chat-messages');
+  const div=document.createElement('div');
+  div.className='msg bot'; div.id='typing-msg';
+  div.innerHTML=`
+    <div class="msg-avatar">🤖</div>
+    <div><div class="msg-bubble">
+      <div class="typing-indicator">
+        <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+      </div>
+    </div></div>`;
+  container.appendChild(div);
+  container.scrollTop=container.scrollHeight;
+}
+async function sendMessage() {
+  const input=document.getElementById('chat-input');
+  const sendBtn=document.getElementById('send-btn');
+  const message=input.value.trim();
+  if (!message) return;
+  const date=document.getElementById('ai-date').value;
+  appendMessage('user', message);
+  input.value=''; input.style.height='auto';
+  sendBtn.disabled=true;
+  appendTyping();
+  try {
+    const r=await fetch(API+'/api/ai/chat',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({message, date})
+    });
+    document.getElementById('typing-msg')?.remove();
+    if (!r.ok) {
+      const err=await r.json();
+      appendMessage('bot', `⚠️ Error: ${err.detail||'Something went wrong'}`);
+    } else {
+      const data=await r.json();
+      appendMessage('bot', data.answer);
+    }
+  } catch(e) {
+    document.getElementById('typing-msg')?.remove();
+    appendMessage('bot', `⚠️ Cannot connect to AI server. Make sure FastAPI is running.\n\nError: ${e.message}`);
+  }
+  sendBtn.disabled=false;
+  input.focus();
+}
+function clearChat() {
+  document.getElementById('chat-messages').innerHTML=`
+    <div class="msg bot">
+      <div class="msg-avatar">🤖</div>
+      <div>
+        <div class="msg-bubble">Chat cleared! Ask me anything about attendance 😊</div>
+        <div class="msg-time">${getTime()}</div>
+      </div>
+    </div>`;
+}
+</script>
+</body>
+</html>

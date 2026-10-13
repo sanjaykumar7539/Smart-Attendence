@@ -1,0 +1,908 @@
+{
+  "scope": "Synthetic image transformations and mocked recognition decisions; not real face recognition accuracy",
+  "total": 180,
+  "passed": 180,
+  "failed": [],
+  "cases": [
+    {
+      "case": "image_-60_32_0_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_0_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_0_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_0_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=128.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_32_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=124.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_0_0.35",
+      "passed": true,
+      "detail": "quality=medium; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_0_0.7",
+      "passed": true,
+      "detail": "quality=medium; brightness=88.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_0_1.0",
+      "passed": true,
+      "detail": "quality=medium; brightness=127.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_64_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_0_0.35",
+      "passed": true,
+      "detail": "quality=good; brightness=44.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_0_0.7",
+      "passed": true,
+      "detail": "quality=good; brightness=88.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_0_1.0",
+      "passed": true,
+      "detail": "quality=good; brightness=127.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-60_112_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_0_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_0_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_0_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=91.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_0_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_32_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_0_0.35",
+      "passed": true,
+      "detail": "quality=medium; brightness=44.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_0_0.7",
+      "passed": true,
+      "detail": "quality=medium; brightness=88.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_0_1.0",
+      "passed": true,
+      "detail": "quality=medium; brightness=128.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_64_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_0_0.35",
+      "passed": true,
+      "detail": "quality=good; brightness=44.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_0_0.7",
+      "passed": true,
+      "detail": "quality=good; brightness=89.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_0_1.0",
+      "passed": true,
+      "detail": "quality=good; brightness=127.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_-30_112_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=126.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_0_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_0_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_0_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_0_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=129.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_32_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=15.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_0_0.35",
+      "passed": true,
+      "detail": "quality=medium; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_0_0.7",
+      "passed": true,
+      "detail": "quality=medium; brightness=88.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_0_1.0",
+      "passed": true,
+      "detail": "quality=medium; brightness=127.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_64_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_0_0.35",
+      "passed": true,
+      "detail": "quality=good; brightness=44.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_0_0.7",
+      "passed": true,
+      "detail": "quality=good; brightness=88.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_0_1.0",
+      "passed": true,
+      "detail": "quality=good; brightness=128.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_0_112_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_0_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_0_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_0_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_0_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=129.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=90.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_32_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=125.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_0_0.35",
+      "passed": true,
+      "detail": "quality=medium; brightness=44.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_0_0.7",
+      "passed": true,
+      "detail": "quality=medium; brightness=89.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_0_1.0",
+      "passed": true,
+      "detail": "quality=medium; brightness=128.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_64_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_0_0.35",
+      "passed": true,
+      "detail": "quality=good; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_0_0.7",
+      "passed": true,
+      "detail": "quality=good; brightness=88.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_0_1.0",
+      "passed": true,
+      "detail": "quality=good; brightness=127.4; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_30_112_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_0_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=15.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_0_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_0_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_0_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.7; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=43.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.5; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_32_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=128.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=15.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_0_0.35",
+      "passed": true,
+      "detail": "quality=medium; brightness=44.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_0_0.7",
+      "passed": true,
+      "detail": "quality=medium; brightness=89.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_0_1.0",
+      "passed": true,
+      "detail": "quality=medium; brightness=127.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.9; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=89.1; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_64_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_0_0.12",
+      "passed": true,
+      "detail": "quality=medium; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_0_0.35",
+      "passed": true,
+      "detail": "quality=good; brightness=44.3; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_0_0.7",
+      "passed": true,
+      "detail": "quality=good; brightness=88.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_0_1.0",
+      "passed": true,
+      "detail": "quality=good; brightness=127.6; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_3_0.12",
+      "passed": true,
+      "detail": "quality=poor; brightness=14.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_3_0.35",
+      "passed": true,
+      "detail": "quality=poor; brightness=44.2; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_3_0.7",
+      "passed": true,
+      "detail": "quality=poor; brightness=88.8; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "image_60_112_3_1.0",
+      "passed": true,
+      "detail": "quality=poor; brightness=127.0; pose is image rotation, not real 3D yaw"
+    },
+    {
+      "case": "decision_000",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_001",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_002",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_003",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_004",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_005",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_006",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_007",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_008",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_009",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_010",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_011",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_012",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_013",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_014",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_015",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_016",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_017",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_018",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_019",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_020",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_021",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_022",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_023",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_024",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_025",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_026",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_027",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_028",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_029",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_030",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_031",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_032",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_033",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_034",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_035",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_036",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_037",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_038",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_039",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_040",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_041",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_042",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_043",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_044",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_045",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_046",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_047",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_048",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_049",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_050",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_051",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_052",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_053",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_054",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_055",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_056",
+      "passed": true,
+      "detail": "expected=UNCERTAIN; actual=UNCERTAIN; SR calls=0"
+    },
+    {
+      "case": "decision_057",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    },
+    {
+      "case": "decision_058",
+      "passed": true,
+      "detail": "expected=CONFIRMED; actual=CONFIRMED; SR calls=0"
+    },
+    {
+      "case": "decision_059",
+      "passed": true,
+      "detail": "expected=UNKNOWN; actual=UNKNOWN; SR calls=0"
+    }
+  ]
+}
